@@ -1,0 +1,26 @@
+- name: 41. Webmontag
+  facebook_url: https://www.facebook.com/events/795532943909061/
+  wiki_url: http://webmontag.de/location/koeln/2016-10-24
+  en:
+    date: December 5th - 7pm
+  de:
+    date: 5. Dezember - 19 Uhr
+  state: upcoming
+
+- name: 40. Webmontag
+  facebook_url: https://www.facebook.com/events/795532943909061/
+  wiki_url: http://webmontag.de/location/koeln/2016-10-24
+  en:
+    date: October 24th - 7pm
+  de:
+    date: 24. Oktober - 19 Uhr
+  state: next
+
+- name: 39. Webmontag
+  facebook_url: https://www.facebook.com/events/795532943909061/
+  wiki_url: http://webmontag.de/location/koeln/2016-10-24
+  en:
+    date: August 22nd - 7pm
+  de:
+    date: 22. August - 19 Uhr
+  state: past

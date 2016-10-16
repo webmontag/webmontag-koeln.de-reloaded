@@ -1,0 +1,27 @@
+doctype html
+html.no-js
+  head
+    = partial "/shared/head"
+
+  body class=page_classes
+
+    #wrap
+      #page
+        #header
+          = partial "/shared/header"
+
+        #content
+          = yield
+
+        #map
+          = partial "/shared/map"
+        #hashtag
+          = "#wmcgn"
+        #twitter-box
+          = partial "/shared/twitterbox"
+        #contact
+          = partial "/shared/contact"
+        #footer
+          = partial "/shared/footer"
+    #scripts
+      = partial "/shared/scripts"

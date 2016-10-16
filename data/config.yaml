@@ -1,0 +1,18 @@
+page:
+  title: Webmontag Köln
+  subtitle:
+  title_sperator: ×
+  facebook_url: https://www.facebook.com/WebmontagKoeln
+  twitter_url: https://twitter.com/wmcgn
+  twitter: "@wmcgn"
+  meta:
+    description: Webmontag Köln - Informelle Treffen derjeniger, welche die Zukuft des Internets gestalten.
+    keywords: Webmontag
+    author: Jan Kus (https://linkedin.com/in/jbvkoos)
+  place:
+    name: Die Wohngemeinschaft - Theater
+    street: Richard-Wagner-Straße 39
+    city: Köln
+    number: 50674
+  google:
+    analytics_id: 

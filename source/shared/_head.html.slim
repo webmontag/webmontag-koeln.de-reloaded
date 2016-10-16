@@ -1,0 +1,22 @@
+meta charset="utf-8"
+title=page_title
+
+meta name="description" content=data.config.page.meta.description
+meta name="keywords" content=data.config.page.meta.keywords
+meta name="author" content=data.config.page.meta.author
+
+= partial "/shared/meta_mobile"
+= partial "/shared/meta_favicons"
+/ 
+= partial "/shared/meta_facebook"
+= partial "/shared/meta_twitter"
+
+/ Stylesheets
+= stylesheet_link_tag "style", "fontello"
+
+/ Prefetch Google Analytics
+link rel="dns-prefetch" href="//www.google-analytics.com"
+
+= partial "/shared/webfontloader"
+
+= yield_content :head
