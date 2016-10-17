@@ -1,1 +1,1 @@
-# Where the fuck is Jan Kus?
+# Webmontag-Koeln.de
