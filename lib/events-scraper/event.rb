@@ -46,8 +46,10 @@ class Event
   end
 
   def store_file
-    # it is called from lib/event-tracker.rb
-    File.open("#{ROOT_DIR}/data/events/#{@date_string}.html", "w") do |f|
+    # check if the events directory is exists.
+    Dir.mkdir(EVENTS_DIR) unless File.exists?(EVENTS_DIR)
+    # store the events files.
+    File.open("#{EVENTS_DIR}#{@date_string}.html", "w") do |f|
       f.write(remote_document)
       f.flush
     end
