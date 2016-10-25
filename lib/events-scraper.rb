@@ -1,4 +1,5 @@
 require_relative 'events-scraper/utils'
+require_relative 'events-scraper/event'
 require 'byebug'
 
 print_divider

@@ -1,12 +1,11 @@
 require 'nokogiri'
 require 'open-uri'
 require 'yaml'
-require_relative 'event.rb'
+
 
 WEBSITE = 'http://webmontag.de'
 FACEBOOK_URL = ''
 ROOT_DIR = File.expand_path("../../../", __FILE__)
-EVENTS_DIR = "#{ROOT_DIR}/data/events/"
 
 def print_divider
   puts "-------------------------------------------".blue

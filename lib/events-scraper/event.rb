@@ -1,3 +1,6 @@
+require_relative 'utils.rb'
+EVENTS_DIR = "#{ROOT_DIR}/data/events/"
+
 class Event
 
 =begin

@@ -1,6 +1,6 @@
 require 'spec_helper'
-require_relative '../../lib/events-scraper/utils.rb'
 require_relative '../../lib/events-scraper/event.rb'
+
 
 describe Event do
    it "Retruns hash and creates file when set: name, link and index" do
