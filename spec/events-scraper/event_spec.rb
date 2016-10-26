@@ -15,7 +15,12 @@ describe Event do
     )
     file = "#{ROOT_DIR}/data/events/_temp_2007-01-22.html"
     event.store_file
+    # check if the file is exists
     expect(File).to exist(file)
+    # check if the file is stored with correct UTF-8 character encoding.
+    file_as_string = File.open(file, "rb:UTF-8").read
+    expect(file_as_string).to include("Kölner Webmontag")
+    #delete the file
     File.delete(file) if File.exist?(file)
    end
 end

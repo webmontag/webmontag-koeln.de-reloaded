@@ -8,9 +8,7 @@ puts "\n\n"
 puts "Requesting Koeln wiki from http://webmontag.de/location/koeln".green
 wiki_url = 'http://webmontag.de/location/koeln/index?do=export_xhtmlbody'
 webmontag_wiki_site = Nokogiri::HTML(open(wiki_url)).css('.archive li div a')
-
 puts "\n\t #{webmontag_wiki_site.length} records found".green
-
 # This array contains each event from wiki website {name, href}.
 events = Array.new
 # extracting {name, href} with index

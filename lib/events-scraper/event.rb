@@ -52,7 +52,7 @@ class Event
     # check if the events directory is exists.
     Dir.mkdir(EVENTS_DIR) unless File.exists?(EVENTS_DIR)
     # store the events files.
-    File.open("#{EVENTS_DIR}#{@date_string}.html", "w") do |f|
+    File.open("#{EVENTS_DIR}#{@date_string}.html", "w:UTF-8") do |f|
       f.write(remote_document)
       f.flush
     end
@@ -65,7 +65,7 @@ class Event
       uri = "#{WEBSITE}#{@link}?do=export_xhtmlbody"
       print "\n #{@index+1} ".yellow
       print "#{WEBSITE}#{@link}.html ".blue
-      Nokogiri::HTML(open(uri))
+      Nokogiri::HTML(open(uri), nil,"UTF-8")
     end
   end
 end
