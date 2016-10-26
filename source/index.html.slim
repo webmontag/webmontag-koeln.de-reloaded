@@ -54,7 +54,13 @@
       	sharing with others is most welcome to join. Whether you are a thinker, builder, designer,
       	founder or funder – Web Monday is your chance to present your product, your service, your
       	startup, or your next big idea to a growing audience of web aficionados.
-
+    .archive
+      h2 Archive
+      ul
+        -past_events.each_with_index do |past_event|
+          li
+            a href="#"
+              ="#{past_event.date}"
   #content-de.content lang="de" style=("display: none;")
     .event-box
       .event-box-inner
