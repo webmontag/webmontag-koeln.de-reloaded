@@ -4,6 +4,9 @@
 
 # Vars
 # ----------------------------------------------
+set :today_date, Time.now.strftime("%Y-%m-%d")
+
+
 set :protocol, "https://"
 set :host, "webmontag-koeln.de.com"
 set :port, 80
@@ -71,6 +74,10 @@ end
 # Helpers
 # ----------------------------------------------
 helpers do
+  # turn string to date object for comparison
+  def parse_date(string)
+    Date.parse(string)
+  end
   def host_with_port
     [host, optional_port].compact.join(':')
   end

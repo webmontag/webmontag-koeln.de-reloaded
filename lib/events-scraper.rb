@@ -30,11 +30,9 @@ webmontag_wiki_site.map.with_index { |a, index|
 print "\n\n"
 
 puts "Creating Yaml file /data/webmondays.yml ".green
-yaml_string = File.read "../data/webmondays.yml"
-data = YAML.load yaml_string
 output = YAML.dump(events.reverse)
 # it is called from lib/event-tracker.rb
-File.write("../data/webmondays.yml", output)
+File.write("#{ROOT_DIR}/data/webmondays.yml", output)
 
 print_divider
 
