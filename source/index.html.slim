@@ -29,13 +29,14 @@
 	          a href=next_event.wiki_url wiki
 	          = " or "
 	          a href=next_event.facebook_url "comment it on facebook"
-          .upcoming_events
-            h3 Upcoming Events
-            hr
-            -upcoming_events.reverse.each_with_index do |upcoming_event|
-              h3
-                =upcoming_event.date
       .triangle
+      .event-box-upcoming
+        h3 Upcoming Events
+        ul
+          -upcoming_events.reverse.each_with_index do |upcoming_event|
+            li
+              a href="#"
+                ="#{upcoming_event.date} - #{upcoming_event.name}"
     .intro
       p
       	a href="javascript:$('#content-en').hide();$('#content-de').show();eventBox.resizeTriangle();"  Zur Deutschen Version

@@ -126,6 +126,7 @@ body {
 	min-height: 380px;
 	float: right;
 	position: relative;
+  border: 10px solid #333;
 }
 
 .event-box-inner {
@@ -191,8 +192,63 @@ body {
 	border-style: solid;
 	border-width: 70px 160px 0 160px;
 	border-color: #333 transparent transparent transparent;
+	background-color: #ededed;
+	padding: 12px 0;
 	bottom: -70px;
 	z-index: 2;
+}
+.event-box-upcoming {
+	background-color: #ededed;
+}
+.event-box-upcoming ul{
+	list-style: none;
+	text-align: left;
+  padding: 20px  20px 20px;
+}
+.event-box-upcoming li{
+	padding: 6px 0;
+}
+.event-box-upcoming li:before{
+	content: "\00bb";
+	font-size: 16px;
+	position: relative;
+	left: 5px;
+	bottom: 1px;
+}
+.event-box-upcoming a{
+	font-size: 1.3em;
+	font-weight: 700;
+	color: #333;
+	padding: 3px 6px;
+}
+.archive{
+	width: 60%;
+}
+.archive h2{
+	font-size: 2.8em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #333;
+  margin: 0.6em 0;
+	width: 123px;
+	border-bottom: 2px solid #333;
+}
+.archive ul{
+	list-style: none;
+}
+.archive li{
+	display: inline-block;
+  width: 24%;
+	padding: 3px 2px;}
+.archive li a{
+	font-size: 1.3em;
+	font-weight: 700;
+	text-decoration: none;
+  padding: 1px 4px;
+  color: #999;
+}
+.archive a:hover{
+  color: #191919;
 }
 
 #map {
