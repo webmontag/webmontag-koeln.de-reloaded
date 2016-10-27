@@ -32,5 +32,8 @@ gem "neat"
 # HTML, XML, SAX, and Reader parser
 gem 'nokogiri'
 
-
-gem 'rspec'
+group :development do
+  gem 'rake'
+  gem 'rspec'
+  gem 'capybara'
+end
