@@ -23,6 +23,7 @@ set :trailing_slash, false
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page "/events/*", :layout => "events"
 
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
@@ -49,7 +50,7 @@ end
 # ----------------------------------------------
 
 activate :es6
-
+activate :i18n
 # Activate directory indexes
 activate :directory_indexes
 
