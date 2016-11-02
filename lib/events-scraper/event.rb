@@ -52,6 +52,7 @@ class Event
     # check if the events directory is exists.
     Dir.mkdir(EVENTS_DIR) unless File.exists?(EVENTS_DIR)
     # store the events files.
+    # files should be stored as .erb so it gets rendered as template.
     File.open("#{EVENTS_DIR}#{@date_string}.html.erb", "w:UTF-8") do |f|
       f.write(remote_document)
       f.flush

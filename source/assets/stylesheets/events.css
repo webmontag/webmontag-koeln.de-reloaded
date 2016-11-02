@@ -1,12 +1,12 @@
-#content{margin: 2% 5%;}
-h1{
+#content {margin: 2% 5%;}
+h1 {
   font-size: 1.3em;
   text-transform: uppercase;
   color: #333;
   margin: 0.6em 0;
-	border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
-.past{
+.past {
   background-color: #ededed;
   clear: right;
   float: right;
@@ -16,15 +16,15 @@ h1{
   padding-bottom: 50px;
   text-align: center;
 }
-.past h2{
+.past h2 {
   width: 100%;
   text-align: center;
 }
-.past h4{
+.past h4 {
   margin: 2px auto;
 }
 
-#event-data{
+#event-data {
   background-color: #eeeeee;
   color: #191919;
   padding: 30px 0 30px 20px;
@@ -32,28 +32,28 @@ h1{
   font-size: 0.93em;
   width: 66.5%;
 }
-#event-data h1{
+#event-data h1 {
   padding-top: 20px;
   border-color: #ddd;
 }
-#event-data h2{
+#event-data h2 {
   font-size: 1.1em;
 }
-#event-data ol,#event-data ul,#event-data li{
+#event-data ol,#event-data ul,#event-data li {
   list-style: none;
 }
-#event-data ol{
+#event-data ol {
   padding: 4px 40px;
 }
-#event-data li{
+#event-data li {
   padding: 2px 10px;
 }
-.back-link{
+.back-link {
   margin: 0 0 40px 0;
   padding: 0 0 11px 0;
   border-bottom: 1px solid #ddd;
 }
-.back-link a{
+.back-link a {
   font-size: 20px;
   text-decoration: none;
   background-color: #191919;
