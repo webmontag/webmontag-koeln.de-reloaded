@@ -1,16 +1,4 @@
 ---
-- :name: 55. Webmontag
-  :facebook_url: https://www.facebook.com/events/145602379153461/
-  :wiki_url: http://webmontag.de/location/koeln/2016-12-05
-  :date: '2017-2-12'
-- :name: 54. Webmontag
-  :facebook_url: https://www.facebook.com/events/145602379153461/
-  :wiki_url: http://webmontag.de/location/koeln/2016-12-05
-  :date: '2017-1-12'
-- :name: 53. Webmontag
-  :facebook_url: https://www.facebook.com/events/145602379153461/
-  :wiki_url: http://webmontag.de/location/koeln/2016-12-05
-  :date: '2016-12-12'
 - :name: 52. Webmontag
   :facebook_url: https://www.facebook.com/events/145602379153461/
   :wiki_url: http://webmontag.de/location/koeln/2016-12-05
@@ -20,7 +8,7 @@
   :wiki_url: http://webmontag.de/location/koeln/2016-10-24
   :date: '2016-10-24'
 - :name: 50. Webmontag
-  :facebook_url: ''
+  :facebook_url: https://www.facebook.com/events/795532943909061/
   :wiki_url: http://webmontag.de/location/koeln/2016-10-17
   :date: '2016-10-17'
 - :name: 49. Webmontag
@@ -52,7 +40,7 @@
   :wiki_url: http://webmontag.de/location/koeln/2015-10-19
   :date: '2015-10-19'
 - :name: 42. Webmontag
-  :facebook_url: ''
+  :facebook_url: https://www.facebook.com/events/539741322843787/
   :wiki_url: http://webmontag.de/location/koeln/2015-09-19
   :date: '2015-09-19'
 - :name: 41. Webmontag

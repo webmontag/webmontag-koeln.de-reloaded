@@ -19,7 +19,7 @@ webmontag_wiki_site.map.with_index { |a, index|
     a.attributes["href"].to_s,
     index
   )
-  # Save files locally by name in data/events/
+  # Save files locally by name in source/events/
   event.store_file
   # Create Yaml event-blocks, each block is a hash.
   events.push(event.to_hash)

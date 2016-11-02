@@ -12,15 +12,14 @@ html.no-js
       #page
         #header
           = partial "/shared/header"
-
-        #content
+        .content
           .event-box
             = partial "shared/content/_event_box.slim",
-              :locals => {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
-          .archive
-            = partial "shared/content/_archive.slim", :locals => {:past_events => past_events}
-          = yield
-
+              locals: {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
+          .past
+            = partial "shared/content/_archive.slim", locals: {past_events: past_events}
+          #event-data
+            = yield
         #footer
           = partial "/shared/footer"
     #scripts

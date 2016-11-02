@@ -13,7 +13,7 @@ describe Event do
        date: "_temp_2007-01-22",
        facebook_url: ""}
     )
-    file = "#{ROOT_DIR}/data/events/_temp_2007-01-22.html"
+    file = "#{ROOT_DIR}/source/events/_temp_2007-01-22.html.erb"
     event.store_file
     # check if the file is exists
     expect(File).to exist(file)

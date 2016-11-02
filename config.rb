@@ -23,7 +23,7 @@ set :trailing_slash, false
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
-page "/events/*", :layout => "events"
+page "/events/*", layout: "events"
 
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
@@ -123,7 +123,7 @@ configure :development do
   set :debug_assets, true
 
   # Output a pretty html
-  ::Slim::Engine.set_options :pretty => true
+  ::Slim::Engine.set_options pretty: true
 
   # Used for generating absolute URLs
   set :host, "localhost"
@@ -146,7 +146,7 @@ configure :build do
   activate :minify_css
 
   # Minify Javascript
-  activate :minify_javascript, :inline => true
+  activate :minify_javascript, inline: true
 
   # Add asset fingerprinting to avoid cache issues
   activate :asset_hash

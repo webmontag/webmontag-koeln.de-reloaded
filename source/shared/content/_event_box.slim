@@ -2,7 +2,9 @@
   h3
     =I18n.t('next_events', locale: locale)
   .event-date
-    =I18n.localize parse_date(next_event.date), format: :long, locale: locale
+    a href="events/#{next_event.date}"
+      =I18n.localize parse_date(next_event.date), format: :long, locale: locale
+
     h2
   .event-location
     =data.config.page.place.name
@@ -33,5 +35,5 @@
   ul
     -upcoming_events.reverse.each_with_index do |upcoming_event|
       li
-        a href="#"
+        a href="events/#{upcoming_event.date}"
           ="#{upcoming_event.date} - #{upcoming_event.name}"

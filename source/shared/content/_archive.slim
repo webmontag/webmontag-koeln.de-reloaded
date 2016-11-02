@@ -1,6 +1,13 @@
 h2 Archive
-ul
-  -past_events.each_with_index do |past_event|
-    li
-      a href="#"
-        ="#{past_event.date}"
+
+
+-events_grouped_by_year = past_events.group_by{ |event| event.date[0,4] }
+-events_grouped_by_year.each do |year, events|
+  .year-wrap
+    h4
+      ="#{year}"
+    ul
+      -events.each do |event|
+        li
+          a href="/events/#{event.date}"
+            =I18n.localize parse_date(event.date), format: :short, locale: 'de'

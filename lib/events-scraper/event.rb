@@ -1,5 +1,5 @@
 require_relative 'utils.rb'
-EVENTS_DIR = "#{ROOT_DIR}/data/events/"
+EVENTS_DIR = "#{ROOT_DIR}/source/events/"
 
 class Event
 
@@ -52,7 +52,7 @@ class Event
     # check if the events directory is exists.
     Dir.mkdir(EVENTS_DIR) unless File.exists?(EVENTS_DIR)
     # store the events files.
-    File.open("#{EVENTS_DIR}#{@date_string}.html", "w:UTF-8") do |f|
+    File.open("#{EVENTS_DIR}#{@date_string}.html.erb", "w:UTF-8") do |f|
       f.write(remote_document)
       f.flush
     end
