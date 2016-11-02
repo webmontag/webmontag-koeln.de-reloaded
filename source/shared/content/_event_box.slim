@@ -36,4 +36,4 @@
     -upcoming_events.reverse.each_with_index do |upcoming_event|
       li
         a href="events/#{upcoming_event.date}"
-          ="#{upcoming_event.date} - #{upcoming_event.name}"
+          =I18n.localize parse_date(upcoming_event.date), format: :day_month, locale: locale

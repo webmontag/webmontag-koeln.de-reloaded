@@ -6,3 +6,6 @@ en:
   event_interact_request_wiki: "Add your talk to the "
   event_interact_way_or: " or "
   event_interact_way_facebook: "comment it on facebook"
+  date:
+    formats:
+      day_month: "%B %d %Ys"

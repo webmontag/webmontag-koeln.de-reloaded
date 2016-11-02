@@ -6,3 +6,6 @@ de:
   event_interact_request_wiki: "Trage deinen Vortrag ins "
   event_interact_way_or: " oder "
   event_interact_way_facebook: "schreib ein Kommentar auf facebook"
+  date:
+    formats:
+      day_month: "%d. %B %Y"

@@ -17,7 +17,7 @@ html.no-js
             = partial "shared/content/_event_box.slim",
               locals: {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
           #event-data
-            = partial "shared/content/_archive.slim", locals: {past_events: past_events, date_format: :long}
+            = partial "shared/content/_archive.slim", locals: {past_events: past_events, date_format: :day_month}
         #footer
           = partial "/shared/footer"
     #scripts
