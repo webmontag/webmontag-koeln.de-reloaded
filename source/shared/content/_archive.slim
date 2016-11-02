@@ -10,4 +10,4 @@ h2 Archive
       -events.each do |event|
         li
           a href="/events/#{event.date}"
-            =I18n.localize parse_date(event.date), format: :short, locale: 'de'
+            =I18n.localize parse_date(event.date), format: date_format, locale: 'de'

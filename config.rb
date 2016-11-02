@@ -24,6 +24,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/events/*", layout: "events"
+page "/events/", layout: "events-all"
 
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)

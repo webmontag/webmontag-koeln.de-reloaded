@@ -16,12 +16,8 @@ html.no-js
           .event-box
             = partial "shared/content/_event_box.slim",
               locals: {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
-          .past
-            = partial "shared/content/_archive.slim", locals: {past_events: past_events, locale: 'de', date_format: :short}
           #event-data
-            .back-link
-              a href="/events/" Archive List
-            = yield
+            = partial "shared/content/_archive.slim", locals: {past_events: past_events, date_format: :long}
         #footer
           = partial "/shared/footer"
     #scripts
