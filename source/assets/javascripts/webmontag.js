@@ -1,5 +1,17 @@
 /*global google, InfoBox, window */
 /*and now map and eventBox. */
+$(document).ready(function(){
+  $("a.change-language").on("click", function(){
+    if ($("#content-en").css('display') == 'none'){
+      $("#content-de").css('display','none')
+      $("#content-en").css('display','block')
+    }else{
+      $("#content-en").css('display','none')
+      $("#content-de").css('display','block')
+    }
+  });
+});
+
 var map, eventBox;
 
 ( function( $ ) {

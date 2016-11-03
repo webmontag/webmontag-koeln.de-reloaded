@@ -37,7 +37,11 @@ h1 {
   border-color: #ddd;
 }
 #event-data h2 {
-  font-size: 1.1em;
+  font-size: 1.4em;
+  color: #999;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 10px;
 }
 #event-data ol,#event-data ul,#event-data li {
   list-style: none;

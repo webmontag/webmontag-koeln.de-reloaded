@@ -77,14 +77,11 @@ body {
 .social-bar .nerdhub {
   background-position: -40px 0;
 }
-
-/**
-* Page Content
-*/
 .content {
   border-top: 10px solid #b2fc52;
-  padding: 0 5%; /* (1260-960)/2 = 300 */
+  padding: 0 5%;
   min-height: 320px;
+  margin-bottom: 60px;
 }
 
 .intro {
@@ -138,7 +135,7 @@ body {
 }
 
 .event-box h3 {
-  font-size: 1.7em;
+  font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 900;
   text-align: center;
@@ -201,6 +198,9 @@ body {
 .event-box-upcoming {
   background-color: #ededed;
 }
+.event-box-upcoming p {
+  padding: 20px 30px;
+}
 .event-box-upcoming ul {
   list-style: none;
   text-align: left;
@@ -224,7 +224,6 @@ body {
 }
 .past {
   width: 60%;
-  padding: 0 0 5% 5%;
 }
 .past h2 {
   font-size: 1.6em;
@@ -522,7 +521,7 @@ body {
 #footer-right {
   float: right;
   height: 100%;
-  width: 23.958333333%;
+  width: 30%;
 }
 
 #footer-right h4 {

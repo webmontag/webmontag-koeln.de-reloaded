@@ -20,9 +20,10 @@ html.no-js
             = partial "shared/content/_archive.slim", locals: {past_events: past_events, locale: 'de', date_format: :short}
           #event-data
             .back-link
-              a href="/events/" Archive List
+              a href="/events/"
+                =I18n.t('events.past.list', locale: 'de')
             = yield
         #footer
           = partial "/shared/footer"
     #scripts
-      = partial "/shared/scripts"
+      = partial "/shared/scripts", locals: { google_maps: false }
