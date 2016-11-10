@@ -11,7 +11,7 @@ describe Event do
        name: "10. Webmontag",
        wiki_url: "http://webmontag.de/location/koeln/2007-01-22",
        date: "_temp_2007-01-22",
-       facebook_url: ""}
+       facebook_url: nil}
     )
     file = "#{ROOT_DIR}/source/events/_temp_2007-01-22.html.erb"
     event.store_file

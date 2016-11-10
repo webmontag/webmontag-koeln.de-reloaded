@@ -22,7 +22,10 @@ html.no-js
             .back-link
               a href="/events/"
                 =I18n.t('events.past.list', locale: 'de')
-            = yield
+            .event-ticket
+              = partial "shared/event-structured-markup", locals: {event: current_page.data}
+            .event-details
+              = yield
         #footer
           = partial "/shared/footer"
     #scripts
