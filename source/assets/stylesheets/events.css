@@ -1,16 +1,13 @@
-.event-ticket{
+.event-hero{
   margin: 0 0 20px 0;
   padding: 0 0 10px 0;
   border-bottom: 1px solid #ddd;
 }
-.event-ticket .description{
+.event-hero .description{
   padding: 10px 0 0 20px;
 }
-.event-ticket .further-info{
+.event-hero .further-info{
   padding: 10px 0 0 20px;
-}
-.event-ticket .event-image{
-
 }
 .event-details{
   margin: 30px 0 0 10px;

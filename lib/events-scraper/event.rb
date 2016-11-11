@@ -1,7 +1,6 @@
 require_relative 'utils.rb'
 EVENTS_DIR = "#{ROOT_DIR}/source/events/"
 EVENTS_URL = "http://webmontag-koeln.de/events/"
-EVENTS_IMAGE = "http://webmontag-koeln.de/assets/images/logo.png"
 
 class Event
 
@@ -73,7 +72,7 @@ class Event
     end
   end
 
-  def front_matter
+  def metadata
     # ----------
     # --These values have been extracted from Google standard Event Structured Data.
     # ----------
@@ -96,15 +95,11 @@ class Event
     #   			name
     #   offers
     #   	url
-
-
-    hash = Hash.new
-
-    hash = {
+    {
       name: "Webmontag",
       title: name,
       url: "#{EVENTS_URL}#{@date_string}",
-      image: EVENTS_IMAGE, # it have to be set as a permanent link.
+      image: 'http://webmontag-koeln.de/assets/images/logo.png', # it have to be set as a permanent link.
       description:  "Web Monday is an informal, non-commercial, and completely community-driven event that aims to connect the people who are shaping the future of the internet. Inspired by the culture of Silicon Valley, it started out in Cologne, Germany in late 2005 in an effort to help spread those sunny California vibes.",
       startDate: "#{@date_string}T19:00",
       endDate: "#{@date_string}T21:00",
@@ -112,11 +107,19 @@ class Event
       location: {
         name: "Die Wohngemeinschaft - Theater",
         address: {
-          streetAddress: "Richard-Wagner-Straße 39", postalCode: "50674", addressLocality: "Cologne", addressCountry: { name: "Germany"  }}},
+          streetAddress: "Richard-Wagner-Straße 39", postalCode: "50674", addressLocality: "Cologne", addressCountry: { name: "Germany"  }
+          }
+        },
       offers: { url: "#{EVENTS_URL}#{@date_string}" },
     }
+  end
 
-    "#{YAML.dump(hash)}---\n"
+  def meta_date
+
+  end
+
+  def front_matter
+    "#{YAML.dump(metadata)}---\n"
   end
 
   def structured_document
