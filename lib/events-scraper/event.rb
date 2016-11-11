@@ -74,6 +74,9 @@ class Event
   end
 
   def front_matter
+    # ----------
+    # --These values have been extracted from Google standard Event Structured Data.
+    # ----------
     # event
     #   name
     #   url
@@ -93,7 +96,7 @@ class Event
     #   			name
     #   offers
     #   	url
-    #
+
 
     hash = Hash.new
 
