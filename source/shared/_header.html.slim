@@ -1,11 +1,36 @@
 header
-  a href="/"
-    h1.hide-text Webmontag Köln
-aside
-  ul#social-bar-header.social-bar
-    li
-      a.facebook.hide-text href="https://www.facebook.com/WebmontagKoeln" Facebook
-    li
-      a.twitter.hide-text href="https://twitter.com/wmcgn" @wmcgn
-    li
-      a.nerdhub.hide-text href="http://hacken.in/events/42-webmontag-koln/" Hackn.in
+  .title-bar[data-responsive-toggle="webmontag-koeln-menu" data-hide-for="medium"]
+    button.menu-icon[type="button" data-toggle]
+    .title-bar-title
+      | Webmontag Köln
+  #webmontag-koeln-menu.top-bar
+    .top-bar-right
+      ul.dropdown.menu[data-dropdown-menu]
+        li.menu-text
+          a[class="current" href="#"]
+            | Home
+        li
+          a[href="#"]
+            | Redner und Firmen
+        li
+          a[href="#"]
+            | Vergangene Events
+        li
+          a[href="#1"]
+            | Über den Webmontag
+
+  #Landing-page-callout
+    .callout.large
+      .row.column.text-center
+        .logo
+          a[href="#"]
+            img src="images/logo.svg"
+        h1
+          | Webmontag Köln
+        .social-icons
+          a.button.social-icon[href="#"]
+            img src="/images/icon-facebook.svg"
+          a.button.social-icon[href="#"]
+            img src="/images/icon-twitter.svg"
+          a.button.social-icon[href="#"]
+            img src="/images/icon-calendar.svg"

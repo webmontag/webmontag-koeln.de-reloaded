@@ -88,7 +88,9 @@ end
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   @bower_assets_path = File.join "#{root}", @bower_config["directory"]
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
 end
+
 
 
 # Helpers

@@ -38,5 +38,4 @@ group :development do
   gem 'rspec'
   gem 'capybara'
   gem 'poltergeist'
-
 end
