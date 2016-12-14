@@ -6,15 +6,21 @@
 # ----------------------------------------------
 set :today_date, Time.now.strftime("%Y-%m-%d")
 
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+set :fonts_dir,   'fonts'
+
+
+ignore "bower_components/*"
+ignore "javascripts/app.js"
+ignore "javascripts/script.js"
+
 
 set :protocol, "https://"
 set :host, "webmontag-koeln.de.com"
 set :port, 80
 
-set :css_dir,     'assets/stylesheets'
-set :js_dir,      'assets/javascripts'
-set :images_dir,  'assets/images'
-set :fonts_dir,   'assets/fonts'
 
 set :trailing_slash, false
 
@@ -31,6 +37,19 @@ page "/events/", layout: "events-all"
 # ----------------------------------------------
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
+
+
+compass_config do |config|
+  config.add_import_path "bower_components/foundation-sites/scss/"
+  config.output_style = :compact
+
+  # Set this to the root of your project when deployed:
+  config.http_path = "/"
+  config.css_dir = "stylesheets"
+  config.sass_dir = "stylesheets"
+  config.images_dir = "images"
+  config.javascripts_dir = "javascripts"
+end
 
 
 # Fix permissons
@@ -69,7 +88,6 @@ end
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   @bower_assets_path = File.join "#{root}", @bower_config["directory"]
-  sprockets.append_path @bower_assets_path
 end
 
 
