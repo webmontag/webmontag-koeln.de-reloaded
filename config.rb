@@ -1,7 +1,7 @@
 # View Middleman configurations:
 # http://localhost:4567/__middleman/config/
 
-
+activate :livereload
 # Vars
 # ----------------------------------------------
 set :today_date, Time.now.strftime("%Y-%m-%d")

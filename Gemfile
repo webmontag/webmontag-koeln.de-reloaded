@@ -21,7 +21,7 @@ gem "middleman-deploy"
 
 # Middleman ES6 support
 gem "middleman-es6", github: "vast/middleman-es6"
-
+gem "middleman-livereload", "~> 3.4.3"
 # Slim
 gem "slim"
 

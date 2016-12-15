@@ -1,21 +1,22 @@
 - past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(today_date)}.compact
 - upcoming_events = data.webmondays.map { |later| later if parse_date(later.date) >= parse_date(today_date)}.compact
 - next_event = upcoming_events.pop
-#content-en.content lang="en" style=("display: none;")
-  .event-box
-    = partial "shared/content/_event_box.slim",
-      locals: {locale: 'en', next_event: next_event, upcoming_events: upcoming_events}
-  .intro
-    = partial "shared/index/_intro.slim", locals: {locale: 'en'}
-  .past
-    = partial "shared/content/_archive.slim", locals: {past_events: past_events, locale: 'en', date_format: :day_month}
-
-#content-de.content lang="de"
-  .event-box
-    = partial "shared/content/_event_box.slim",
+#main-container
+  .row
+    #next-event-box.large-5.medium-12.columns
+      = partial "shared/content/_event_box.slim",
       locals: {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
-  .intro
-    = partial "shared/index/_intro.slim", locals: {locale: 'de'}
-  .past
-    = partial "shared/content/_archive.slim", locals: {past_events: past_events, locale: 'de', date_format: :day_month}
- 
+    .large-7.medium-12.columns
+      = partial "shared/index/_intro.slim", locals: {next_event: next_event}
+hr
+
+#callout-container.row
+  .text-center.large-10.large-offset-1.medium-12.dark
+    .callout.black-callout
+      h3
+        | Du hast was erzählen?
+      .text-center.large-10.large-offset-1.medium-12
+        p
+          |Web Montag ist ein informelles, nicht-kommerzielles, dezentral organisiertes Treffen, das zum Ziel hat, all diejenigen miteinander zu verbinden, die die Zukunft des Internet gestalten. Inspiriert von der Kultur Silicon Valleys startete der Web Montag gegen Ende 2005 in Köln als Versuch, ein bisschen “kalifornischen Sonnenschein” nach Deutschland zu bringen.
+      a[href="#" class="button default"]
+        | Talk einreichen

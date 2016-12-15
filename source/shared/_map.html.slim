@@ -1,13 +1,3 @@
-#map-canvas
-#map-markers
-  div data-loc="50.9350405, 6.934503" data-title=('CaféBar "die wohngemeinschaft"') 
-    div
-      img.location-icon src="/assets/images/example-infobox.png"
-      p.location-address
-        = '"CaféBar "die wohngemeinschaft"'
-        <br/>
-        = "Richard-Wagner-Straße 39"
-        <br/>
-        = "50674 Köln"
-      p.location-contact
-        a href="https://twitter.com/wmcgn"  twitter.com/wmcgn
+script
+  |  function initMap() { var position = {lat: 50.9350405, lng: 6.934503}; var map = new google.maps.Map(document.getElementById('map'), { zoom: 14, center: position }); var marker = new google.maps.Marker({ position: position, map: map, title: 'Die Wohngemeinschaft, Richard-Wagner-Straße 39, 50674 Köln' }); var contentString = '<div id="content">'+ '<div id="siteNotice">'+ '</div>'+ '<h5 id="firstHeading" class="firstHeading">Die Wohngemeinschaft</h5>'+ '<div id="bodyContent">'+ '<p>Die Wohngemeinschaft - Theater <br/>Richard-Wagner-Straße 39, 50674 Köln</p>'+ '</div>'; var infowindow = new google.maps.InfoWindow({ content: contentString }); marker.addListener('click', function() { infowindow.open(map, marker); }); } 
+script[async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCkoUqGUd-O3RI3cf3ZZZme0dIOri5Mf0&callback=initMap"]

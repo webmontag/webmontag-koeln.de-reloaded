@@ -10,35 +10,10 @@
     =data.config.page.place.name
   .event-address
     ="#{data.config.page.place.street}, #{data.config.page.place.number} #{data.config.page.place.city}"
-  .event-attend
-    p
-      =I18n.t('events.next.attend_now', locale: locale)
+
+  p.event-attend
+    =I18n.t('events.next.attend_now', locale: locale)
+
   .event-attend-buttons
-    a.button href=next_event.facebook_url
-      i.icon-facebook
-      = "Facebook"
-    a.button href=next_event.wiki_url
-      i.icon-wikipedia
-      = "Wiki"
-  .event-request
-    p
-      =I18n.t('events.next.interact_request', locale: locale)
-      <br/>
-      = I18n.t('events.next.interact_wiki', locale: locale)
-      a href=next_event.wiki_url wiki
-      = I18n.t('events.next.interact_or', locale: locale)
-      a href=next_event.facebook_url
-        =I18n.t('events.next.interact_facebook', locale: locale)
-.triangle
-.event-box-upcoming
-  h3
-    =I18n.t('events.upcoming.title', locale: locale)
-  - if upcoming_events.empty?
-    p
-      =I18n.t('events.upcoming.no-events', locale: locale)
-  - else
-    ul
-      -upcoming_events.reverse.each_with_index do |upcoming_event|
-        li
-          a href="events/#{upcoming_event.date}"
-            =I18n.localize parse_date(upcoming_event.date), format: :day_month, locale: locale
+    a.button.default href=next_event.facebook_url
+      |Über eventbrite anmelden
