@@ -1,0 +1,19 @@
+---
+en:
+  events:
+    next:
+      title: "Next event"
+      attend_now: "Attend now!"
+      interact_request: "Do you want to share something? "
+      interact_wiki: "Add your talk to the "
+      interact_or: " or "
+      interact_facebook: "comment it on facebook"
+    upcoming:
+      title: "Upcoming Events"
+      no-events: "The date of the next event will be announced soon."
+    past:
+      title: "Archive"
+      list: "Archive List"
+  date:
+    formats:
+      day_month: "%B %d"

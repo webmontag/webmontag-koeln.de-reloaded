@@ -28,3 +28,15 @@ gem "slim"
 # Sass Libraries
 gem "bourbon"
 gem "neat"
+
+# HTML, XML, SAX, and Reader parser
+gem 'nokogiri'
+gem 'byebug'
+
+group :development do
+  gem 'rake'
+  gem 'rspec'
+  gem 'capybara'
+  gem 'poltergeist'
+
+end

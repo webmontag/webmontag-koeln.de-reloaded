@@ -4,6 +4,9 @@
 
 # Vars
 # ----------------------------------------------
+set :today_date, Time.now.strftime("%Y-%m-%d")
+
+
 set :protocol, "https://"
 set :host, "webmontag-koeln.de.com"
 set :port, 80
@@ -20,6 +23,8 @@ set :trailing_slash, false
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page "/events/*", layout: "events"
+page "/events/", layout: "events-all"
 
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
@@ -46,7 +51,7 @@ end
 # ----------------------------------------------
 
 activate :es6
-
+activate :i18n
 # Activate directory indexes
 activate :directory_indexes
 
@@ -71,6 +76,10 @@ end
 # Helpers
 # ----------------------------------------------
 helpers do
+  # turn string to date object for comparison
+  def parse_date(string)
+    Date.parse(string)
+  end
   def host_with_port
     [host, optional_port].compact.join(':')
   end
@@ -115,7 +124,7 @@ configure :development do
   set :debug_assets, true
 
   # Output a pretty html
-  ::Slim::Engine.set_options :pretty => true
+  ::Slim::Engine.set_options pretty: true
 
   # Used for generating absolute URLs
   set :host, "localhost"
@@ -138,7 +147,7 @@ configure :build do
   activate :minify_css
 
   # Minify Javascript
-  activate :minify_javascript, :inline => true
+  activate :minify_javascript, inline: true
 
   # Add asset fingerprinting to avoid cache issues
   activate :asset_hash

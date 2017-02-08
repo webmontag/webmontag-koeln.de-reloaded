@@ -1,0 +1,32 @@
+- past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(today_date)}.compact
+- upcoming_events = data.webmondays.map { |later| later if parse_date(later.date) >= parse_date(today_date)}.compact
+- next_event = upcoming_events.pop
+doctype html
+html.no-js
+  head
+    = partial "/shared/head"
+    = stylesheet_link_tag "events"
+  body class=page_classes
+
+    #wrap
+      #page
+        #header
+          = partial "/shared/header"
+        .content
+          .event-box
+            = partial "shared/content/_event_box.slim",
+              locals: {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
+          .past
+            = partial "shared/content/_archive.slim", locals: {past_events: past_events, locale: 'de', date_format: :short}
+          #event-data
+            .back-link
+              a href="/events/"
+                =I18n.t('events.past.list', locale: 'de')
+            .event-hero
+              = partial "shared/event-structured-markup", locals: {event: current_page.data}
+            .event-details
+              = yield
+        #footer
+          = partial "/shared/footer"
+    #scripts
+      = partial "/shared/scripts", locals: { google_maps: false }
