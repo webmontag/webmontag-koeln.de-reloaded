@@ -1,14 +1,14 @@
 - past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(today_date)}.compact
 - upcoming_events = data.webmondays.map { |later| later if parse_date(later.date) >= parse_date(today_date)}.compact
 - next_event = upcoming_events.pop
-#main-container
+.b-next-event
   .row
-    #next-event-box.large-5.medium-12.columns
+    .b-next-event--box.large-5.medium-12.columns
       = partial "shared/content/_event_box.slim",
       locals: {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
-    .large-7.medium-12.columns
-      = partial "shared/index/_intro.slim", locals: {next_event: next_event}
-hr
+.row
+  .large-7.medium-12.columns
+    = partial "shared/index/_intro.slim", locals: {next_event: next_event}
 
 #callout-container.row
   .text-center.large-10.large-offset-1.medium-12.dark

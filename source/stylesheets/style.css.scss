@@ -4,4 +4,16 @@
 
 
 @import 'generic';
-@import 'generic.header';
+//@import 'generic.header';
+
+// Atoms
+@import 'atoms/menu-item';
+@import 'atoms/social-icons';
+
+// Blocks
+@import 'blocks/header';
+@import 'blocks/dropdown-menu';
+@import 'blocks/next-event';
+
+
+

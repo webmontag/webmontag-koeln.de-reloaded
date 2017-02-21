@@ -1,3 +1,6 @@
 h2
-  = next_event.name
+  - if next_event.present?
+    = next_event.name
+  - else
+    | Webmontag Köln
 p Alle, die mit Web 2.0 und benachbarten Themen zu tun haben und interessiert daran sind, ihr Wissen zu teilen und sich miteinander auszutauschen, sind herzlich willkommen. Ob Erfinder, Ingenieur, Designer, Gründer oder Finanzier – Web Montag ist die Gelegenheit, sein neues Produkt, Service, Startup, oder die nächste große Idee einem stetig wachsenden Publikum von Webbegeisterten vorzustellen.

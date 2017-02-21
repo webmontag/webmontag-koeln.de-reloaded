@@ -6,5 +6,12 @@ $white: #FFFFFF;
 $dark-blue: #3A464B;
 $light-grey: #F4F4F4;
 $dark-grey: #808080;
+$orange: #E74625;
+$yellow: #D6942B;
 
 $mirage: #3E474D;
+
+$gradient-next-event: linear-gradient(to bottom, $orange, $yellow);
+
+// Overrides Foundation's default font family
+$body-font-family: 'Source Sans Pro', sans-serif

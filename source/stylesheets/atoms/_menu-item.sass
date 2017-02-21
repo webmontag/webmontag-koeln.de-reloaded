@@ -1,0 +1,16 @@
+.a-menu-item
+  color: $mirage
+
+  &.is-current
+    border-bottom: 2px solid $green
+
+  &:hover
+    color: $green
+  &:active, &:focus
+    color: $green
+
+  +breakpoint(small only)
+    &.is-current
+      border: 0
+      color: $green
+      font-weight: 600

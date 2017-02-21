@@ -1,37 +1,35 @@
-header
-  .title-bar[data-responsive-toggle="webmontag-koeln-menu" data-hide-for="medium"]
+header.b-header
+  .title-bar[data-responsive-toggle="main-menu" data-hide-for="medium"]
     button.menu-icon[type="button" data-toggle]
     .title-bar-title
-      | Webmontag Köln
-  #webmontag-koeln-menu.top-bar
+      | Menu
+  #main-menu.top-bar
     .top-bar-right
-      ul.dropdown.menu[data-dropdown-menu]
-        li.menu-text
-          a[class="current" href="#"]
+      ul.dropdown.b-dropdown-menu.menu[data-dropdown-menu]
+        li
+          a.a-menu-item.is-current[href="#"]
             | Home
         li
-          a[href="#"]
+          a.a-menu-item[href="#"]
             | Redner und Firmen
         li
-          a[href="#"]
+          a.a-menu-item[href="#"]
             | Vergangene Events
         li
-          a[href="#1"]
+          a.a-menu-item[href="#1"]
             | Über den Webmontag
 
-  #Landing-page-callout
-    .callout.large
-      .row.column.text-center
-        .logo
-          a[href="#"]
-            img src="images/logo.svg"
-        h1
-          | Webmontag Köln
-        .social-icons
-          a.button.social-icon[href="#"]
-            img src="/images/icon-facebook.svg"
-          a.button.social-icon[href="#"]
-            img src="/images/icon-twitter.svg"
-          a.button.social-icon[href="#"]
-            img src="/images/icon-calendar.svg"
-hr
+  .row.column.text-center
+    .b-header--content
+      .logo
+        a[href="#"]
+          img src="images/logo.svg"
+      h1.a-page-title
+        | Webmontag Köln
+      .b-social-icons
+        a.button.a-social-icon[href="#"]
+          img src="/images/icon-facebook.svg"
+        a.button.a-social-icon[href="#"]
+          img src="/images/icon-twitter.svg"
+        a.button.a-social-icon[href="#"]
+          img src="/images/icon-calendar.svg"
