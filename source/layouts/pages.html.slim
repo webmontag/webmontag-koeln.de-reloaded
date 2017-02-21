@@ -1,0 +1,17 @@
+- past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(today_date)}.compact
+- upcoming_events = data.webmondays.map { |later| later if parse_date(later.date) >= parse_date(today_date)}.compact
+- next_event = upcoming_events.pop
+doctype html
+html.no-js
+  head
+    = partial "/shared/head"
+    = stylesheet_link_tag "events"
+  body class=page_classes
+
+    #wrap
+      #page
+        = yield
+      #footer
+        = partial "/shared/footer"
+      #scripts
+        = javascript_include_tag "all"

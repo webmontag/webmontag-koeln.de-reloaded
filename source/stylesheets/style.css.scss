@@ -2,9 +2,8 @@
 @import 'foundation';
 @include foundation-everything;
 
-
 @import 'generic';
-//@import 'generic.header';
+@import 'about';
 
 // Atoms
 @import 'atoms/menu-item';
@@ -14,6 +13,3 @@
 @import 'blocks/header';
 @import 'blocks/dropdown-menu';
 @import 'blocks/next-event';
-
-
-
