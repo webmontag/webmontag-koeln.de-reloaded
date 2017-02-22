@@ -1,0 +1,75 @@
+@import 'settings'
+@import 'foundation'
+@include foundation-everything
+
+@import 'generic'
+@import 'about'
+
+// Atoms
+@import 'atoms/menu-item'
+@import 'atoms/social-icons'
+
+// Blocks
+@import 'blocks/header'
+@import 'blocks/dropdown-menu'
+@import 'blocks/next-event'
+
+.person-blocks
+  .person-container
+    float: left
+  .person
+    margin: 20px 60px
+    .p-header
+      img
+        width: 100%
+      .p-name
+        background-color: $green
+        width: 100%
+        padding: 12px 20px
+        position: relative
+        right: 20px
+        bottom: 35px
+        h4
+          font-weight: bold
+          font-size: 1.5em
+          margin: 0
+
+    .p-body
+      margin-top: -20px
+      p
+        line-height: 1em
+    .p-footer
+      background-color: inherit
+
+ul.contact-icons
+  width: 100%
+  list-style: none
+  padding: 0
+  margin: 0
+  li
+    display: inline
+    padding: 0
+    margin: 0
+    a.social-icon
+      transition: opacity .2s ease-out
+      -moz-transition: opacity .2s ease-out
+      -webkit-transition: opacity .2s ease-out
+      -o-transition: opacity .2s ease-out
+      background-color: inherit
+      padding: 10px 13px
+      color: inherit
+      &:hover
+        opacity: 0.5
+
+.content-wrapper
+  background-color: $white
+  color: $mirage
+  a.social-icon
+    path
+      fill: $mirage
+.content-wrapper-inverted
+  background-color: $mirage
+  color: $light-grey
+  a.social-icon
+    path
+      fill: $light-grey

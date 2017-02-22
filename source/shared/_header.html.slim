@@ -18,12 +18,11 @@ header.b-header
         li
           a.a-menu-item[href="#1"]
             | Über den Webmontag
-
-  #Landing-page-callout
-    .large
-      -if defined? yield
-        = yield
-      -else
+  -if defined? yield
+    = yield
+  -else
+    #Landing-page-callout
+      .large
         .callout
           .row.column.text-center
             .logo
