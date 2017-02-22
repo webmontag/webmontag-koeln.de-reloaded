@@ -20,21 +20,21 @@ header.b-header
             | Über den Webmontag
 
   #Landing-page-callout
-    .callout.large
+    .large
       -if defined? yield
         = yield
       -else
-        .row.column.text-center
-          .logo
-            a[href="#"]
-              img src="images/logo.svg"
-          h1
-            | Webmontag Köln
-          .social-icons
-            a.button.social-icon[href="#"]
-              img src="/images/icon-facebook.svg"
-            a.button.social-icon[href="#"]
-              img src="/images/icon-twitter.svg"
-            a.button.social-icon[href="#"]
-              img src="/images/icon-calendar.svg"
-hr
+        .callout
+          .row.column.text-center
+            .logo
+              a[href="#"]
+                img src="images/logo.svg"
+            h1
+              | Webmontag Köln
+            .social-icons
+              a.button.social-icon[href="#"]
+                img src="/images/icon-facebook.svg"
+              a.button.social-icon[href="#"]
+                img src="/images/icon-twitter.svg"
+              a.button.social-icon[href="#"]
+                img src="/images/icon-calendar.svg"
