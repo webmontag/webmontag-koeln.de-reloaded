@@ -32,6 +32,8 @@ page '/*.txt', layout: false
 page "/about/", layout: "pages"
 page "/events/*", layout: "events"
 page "/events/", layout: "pages"
+page "/speakers/", layout: "pages"
+page "/archive/", layout: "pages"
 
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
