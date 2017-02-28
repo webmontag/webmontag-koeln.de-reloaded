@@ -8,8 +8,17 @@
 // Atoms
 @import 'atoms/menu-item';
 @import 'atoms/social-icons';
+@import 'atoms/trapezoid-headline';
+@import 'atoms/button';
 
 // Blocks
 @import 'blocks/header';
 @import 'blocks/dropdown-menu';
 @import 'blocks/next-event';
+@import 'blocks/event-box';
+@import 'blocks/intro';
+@import 'blocks/submit-talk';
+@import 'blocks/map';
+
+// Helpers
+@import 'helpers/border-right';

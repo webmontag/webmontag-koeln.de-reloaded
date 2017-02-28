@@ -1,3 +1,26 @@
-script
-  |  function initMap() { var position = {lat: 50.9350405, lng: 6.934503}; var map = new google.maps.Map(document.getElementById('map'), { zoom: 14, center: position }); var marker = new google.maps.Marker({ position: position, map: map, title: 'Die Wohngemeinschaft, Richard-Wagner-Straße 39, 50674 Köln' }); var contentString = '<div id="content">'+ '<div id="siteNotice">'+ '</div>'+ '<h5 id="firstHeading" class="firstHeading">Die Wohngemeinschaft</h5>'+ '<div id="bodyContent">'+ '<p>Die Wohngemeinschaft - Theater <br/>Richard-Wagner-Straße 39, 50674 Köln</p>'+ '</div>'; var infowindow = new google.maps.InfoWindow({ content: contentString }); marker.addListener('click', function() { infowindow.open(map, marker); }); } 
+javascript:
+  function initMap() {
+    var mapOptions = {
+      // Custom map styles
+      // https://snazzymaps.com/style/8356/flat
+      styles: [{"featureType":"administrative.neighborhood","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#ff0000"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}],
+
+      // Center position (Wohngemeinschaft Köln)
+      center: new google.maps.LatLng(50.9350405, 6.934503),
+
+      // Zoom level
+      zoom: 14,
+
+      // Disable zoom
+      scrollwheel: false,
+    }
+
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    var marker = new google.maps.Marker({
+      position: mapOptions.center,
+      icon: "images/address-bubble.png",
+      map: map
+    });
+  }
+
 script[async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCkoUqGUd-O3RI3cf3ZZZme0dIOri5Mf0&callback=initMap"]

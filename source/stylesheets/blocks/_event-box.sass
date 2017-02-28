@@ -1,0 +1,51 @@
+.b-event-box
+  color: $white
+  position: relative
+  z-index: 0
+  padding: 80px 60px 60px 60px
+  margin-bottom: 60px
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 0
+    width: 100%
+    height: 100%
+    background: $dark-blue
+    transform-origin: 100% 0
+    transform: skewY(-2deg)
+    z-index: -1
+
+  &:before
+    transform: skewY(2deg)
+    top: 40px
+
+  &:after
+    top: -40px
+
+  .b-event-box--date
+    font-size: 36px
+    font-weight: $semibold
+
+  .b-event-box--location
+    font-size: 24px
+    font-weight: $semibold
+
+  .b-event-box--attend
+    padding-left: 20px
+    padding-bottom: 20px
+    p
+      font-size: 24px
+      font-weight: $semibold
+      padding-bottom: 20px
+
+  +breakpoint(small only)
+    padding: 20px
+    .b-event-box--location
+      font-size: 18px
+    .b-event-box--attend
+      padding-left: 0
+      padding-top: 20px
+      p
+        font-size: 18px
+

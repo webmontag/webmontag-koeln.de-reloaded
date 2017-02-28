@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="435px" height="131px" viewBox="0 0 435 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Headline</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0.4561255,1.94621638 C0.4561255,0.845524661 1.35293446,-0.0142106678 2.45538291,0.025805072 L413.000743,14.9274326 C414.104902,14.9675105 415,15.9041702 415,16.9915975 L415,98.6804648 C415,99.7803937 414.103191,100.693763 413.000743,100.72044 L2.45538291,110.65482 C1.35122353,110.681539 0.4561255,109.811723 0.4561255,108.71022 L0.4561255,1.94621638 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.18285779 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-109.000000, -568.000000)">
+            <g id="Sheet_Next-Event" transform="translate(0.000000, 578.000000)">
+                <g id="Card" transform="translate(119.000000, 0.000000)">
+                    <g id="Headline">
+                        <g id="BG_Headline">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

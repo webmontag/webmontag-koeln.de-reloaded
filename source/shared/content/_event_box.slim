@@ -1,23 +1,25 @@
-.event-box-inner
-  h3
+.b-event-box
+  h3.a-trapezoid-headline
     =I18n.t('events.next.title', locale: locale)
-  .event-date
-    - if next_event.present?
-      a href="events/#{next_event.date}"
-        =I18n.localize parse_date(next_event.date), format: :long, locale: locale
-    - else
-      p TBA
+  .row[data-equalizer data-equalize-on="medium"]
+    .small-12.medium-6.columns.h-border-right[data-equalizer-watch]
+      h4.b-event-box--date
+        - if next_event.present?
+          a href="events/#{next_event.date}"
+            =I18n.localize parse_date(next_event.date), format: :long, locale: locale
+        - else
+          | TBA
+      .b-event-box--location
+        =data.config.page.place.name
+        br
+        ="#{data.config.page.place.street}"
+        br
+        ="#{data.config.page.place.number} #{data.config.page.place.city}"
+    .small-12.medium-6.columns[data-equalizer-watch]
+      - if next_event.present?
+        .b-event-box--attend
+          p=I18n.t('events.next.attend_now', locale: locale)
 
-    h2
-  .event-location
-    =data.config.page.place.name
-  .event-address
-    ="#{data.config.page.place.street}, #{data.config.page.place.number} #{data.config.page.place.city}"
-
-  p.event-attend
-    =I18n.t('events.next.attend_now', locale: locale)
-
-  .event-attend-buttons
-  - if next_event.present?
-    a.button.default href=next_event.facebook_url
-      |Über eventbrite anmelden
+          - if next_event.facebook_url
+            a.button.default href=next_event.facebook_url
+              | Über facebbook anmelden

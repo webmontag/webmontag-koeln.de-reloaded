@@ -19,22 +19,20 @@ header.b-header
           a.a-menu-item[href="#1"]
             | Über den Webmontag
 
-  #Landing-page-callout
-    .callout.large
-      -if defined? yield
-        = yield
-      -else
-        .row.column.text-center
-          .logo
-            a[href="#"]
-              img src="images/logo.svg"
-          h1
-            | Webmontag Köln
-          .social-icons
-            a.button.social-icon[href="#"]
-              img src="/images/icon-facebook.svg"
-            a.button.social-icon[href="#"]
-              img src="/images/icon-twitter.svg"
-            a.button.social-icon[href="#"]
-              img src="/images/icon-calendar.svg"
-hr
+  .b-header--content
+    -if defined? yield
+      = yield
+    -else
+      .row.column.text-center
+        .logo
+          a[href="#"]
+            img src="images/logo.svg"
+        h1.a-page-title
+          | Webmontag Köln
+        .social-icons
+          a.button.a-social-icon[href="#"]
+            img src="/images/icon-facebook.svg"
+          a.button.a-social-icon[href="#"]
+            img src="/images/icon-twitter.svg"
+          a.button.a-social-icon[href="#"]
+            img src="/images/icon-calendar.svg"
