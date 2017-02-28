@@ -32,6 +32,8 @@ page '/*.txt', layout: false
 page "/about/", layout: "pages"
 page "/events/*", layout: "events"
 page "/events/", layout: "pages"
+page "/speakers/", layout: "pages"
+page "/archive/", layout: "pages"
 
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
@@ -104,7 +106,9 @@ helpers do
   def host_with_port
     [host, optional_port].compact.join(':')
   end
-
+  def svg(image)
+    sprockets.find_asset(image).to_s
+  end
   def optional_port
     port unless port.to_i == 80
   end
