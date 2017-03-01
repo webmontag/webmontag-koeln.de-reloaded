@@ -1,10 +1,15 @@
+---
+title: "Redner & Firmen"
+navigationable: true
+---
+
 - SPEAKERS = data.speakers
 #header
 = partial "/shared/header"
   #speakers-header.clearfix
     .large-10.large-centered.medium-12.columns
       h3 = SPEAKERS.title
-      
+
 #main-container.clearfix
   #speakers.large-centered.medium-12.columns
     = partial "speakers", locals: { speakers: SPEAKERS.speakers }

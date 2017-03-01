@@ -1,3 +1,8 @@
+---
+title: "Home"
+navigationable: true
+---
+
 - past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(today_date)}.compact
 - upcoming_events = data.webmondays.map { |later| later if parse_date(later.date) >= parse_date(today_date)}.compact
 - next_event = upcoming_events.pop
