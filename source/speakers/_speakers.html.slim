@@ -1,17 +1,7 @@
-.b-masonry
-  .a-person-container.as-dark.b-masonry--item
-      = partial "/shared/person_block"
-  .a-person-container.as-dark.b-masonry--item
-      = partial "/shared/person_block"
-  .a-person-container.as-dark.b-masonry--item
-      = partial "/shared/person_block-long"
-  .a-person-container.as-dark.b-masonry--item
-      = partial "/shared/person_block"
-  .a-person-container.as-dark.b-masonry--item
-      = partial "/shared/person_block"
-  .a-person-container.as-dark.b-masonry--item
-      = partial "/shared/person_block-long"
-  .a-person-container.as-dark.b-masonry--item
-      = partial "/shared/person_block"
-  .a-person-container.as-dark.b-masonry--item
-      = partial "/shared/person_block"
+- speakers.each do |speaker|
+  - if speaker.company
+    .company-container.large-3.medium-6.small-12.content-wrapper
+      = partial "/shared/company_block", locals: { company: speaker }
+  - else
+    .person-container.large-3.medium-6.small-12.content-wrapper-inverted
+      = partial "/shared/person_block", locals: { person: speaker }

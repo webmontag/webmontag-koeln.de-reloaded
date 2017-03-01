@@ -1,23 +1,28 @@
-.a-person
-	.a-person--header
-		.a-person--image
-			img src="https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
-		h4.a-person--name
-			| Justin Public
-	.a-person--body
+.person
+	.p-header
+		.p-image			
+			img src="#{person.image}"
+		.p-name
+			h4
+				= person.name
+	.p-body
 		p
-			|Seitdem hat sich der Web Montag schnell weiterverbreitet:
-			|Treffen finden mittlerweile in mehr als 40 Städten überall
-			|in Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
-	.a-person--footer
+			= person.info
+	.p-footer
 		ul.contact-icons
-			li
-				a.social-icon[href="#"]
-					= svg('icon-twitter.svg')
-			li
-				a.social-icon[href="#"]
-					= svg('icon-facebook.svg')
-			li
-				a.social-icon[href="#"]
-					span
-						= svg('icon-calendar.svg')
+			- if person.instagram
+				li
+					a.social-icon[href="#", title="#{person.name}s instagram"]
+						span = svg('icon-calendar.svg')
+			- if person.twitter
+				li
+					a.social-icon[href="#", title="#{person.name}s twitter"]
+						span = svg('icon-calendar.svg')
+			- if person.facebook
+				li
+					a.social-icon[href="#", title="#{person.name}s facebook"]
+						span = svg('icon-calendar.svg')
+			- if person.github
+				li
+					a.social-icon[href="#", title="#{person.name}s github"]
+						span = svg('icon-calendar.svg')

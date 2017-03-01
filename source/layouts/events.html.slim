@@ -16,8 +16,6 @@ html.no-js
           .event-box
             = partial "shared/content/_event_box.slim",
               locals: {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
-          .past
-            = partial "shared/content/_archive.slim", locals: {past_events: past_events, locale: 'de', date_format: :short}
           #event-data
             .back-link
               a href="/events/"
@@ -30,3 +28,4 @@ html.no-js
           = partial "/shared/footer"
     #scripts
       = partial "/shared/scripts", locals: { google_maps: false }
+      = javascript_include_tag "all"

@@ -7,7 +7,7 @@
         p = ABOUT.description
 #main-container
   #organizers.content-wrapper-inverted.row.large-10.large-centered.medium-12.columns
-    = partial "organizers"
+    = partial "organizers", locals: { organizers: ABOUT.organizers }
   #moderators.row.large-10.large-centered.medium-12.columns
     .content-wrapper
-      = partial "moderators"
+      = partial "moderators", locals: { moderators: ABOUT.moderators }

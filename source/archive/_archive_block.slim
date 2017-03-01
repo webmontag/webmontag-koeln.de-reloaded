@@ -1,17 +1,15 @@
-.archive-header.clearfix
-  h3.year
-    |1999
-.archive-body
-  ul
-    li
-      a href="#"
-        | 19. Februar
-    li
-      a href="#"
-        | 1. Juli
-    li
-      a href="#"
-        | 17.August
-    li
-      a href="#"
-        | 17.Dezember
+- past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(today_date)}.compact
+- events_grouped_by_year = past_events.group_by{ |event| event.date[0,4] }
+- events_grouped_by_year.each do |year, events|
+  .archive-block.medium-6.small-12
+    .content-wrapper-inverted
+      .archive-header.clearfix
+        h3.year
+          = year
+      .archive-body
+        ul class="archive-#{year}"
+          - events.reverse.each do |event|
+            li
+              a href="/events/#{event.date}"
+                
+                = I18n.localize parse_date(event.date), format: '%d. %B', locale: 'de'
