@@ -1,7 +1,8 @@
-- speakers.each do |speaker|
-  - if speaker.company
-    .company-container.large-3.medium-6.small-12.content-wrapper
-      = partial "/shared/company_block", locals: { company: speaker }
-  - else
-    .person-container.large-3.medium-6.small-12.content-wrapper-inverted
-      = partial "/shared/person_block", locals: { person: speaker }
+.b-masonry
+  - speakers.each do |speaker|
+    - if speaker.company
+      .company-container.content-wrapper.b-masonry--item
+        = partial "/shared/company_block", locals: { company: speaker }
+    - else
+      .a-person-container.as-dark.b-masonry--item
+        = partial "/shared/person_block", locals: { person: speaker }

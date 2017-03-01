@@ -1,14 +1,14 @@
-.person
-	.p-header
-		.p-image			
+.a-person
+	.a-person--header
+		.a-person--image
 			img src="#{person.image}"
-		.p-name
+		.a-person--name
 			h4
 				= person.name
-	.p-body
+	.a-person--body
 		p
 			= person.info
-	.p-footer
+	.a-person--footer
 		ul.contact-icons
 			- if person.instagram
 				li
