@@ -6,13 +6,18 @@ navigationable: true
 - ABOUT = data.about
 #header
   = partial "/shared/header"
-    #about.clearfix
-      .content-wrapper.row.large-10.large-centered.medium-12.columns
-        h3 = ABOUT.title
-        p = ABOUT.description
-#main-container
-  #organizers.content-wrapper-inverted.row.large-10.large-centered.medium-12.columns
-    = partial "organizers", locals: { organizers: ABOUT.organizers }
-  #moderators.row.large-10.large-centered.medium-12.columns
-    .content-wrapper
-      = partial "moderators", locals: { moderators: ABOUT.moderators }
+
+    .b-content-boxes
+      .row
+        .small-12.medium-11.columns
+          .a-content-box
+            h3.a-content-box--title = ABOUT.title
+            p = ABOUT.description
+      .row
+        .small-12.medium-11.medium-offset-1.columns
+          .a-content-box.as-dark.as-shifted
+            = partial "organizers", locals: { organizers: ABOUT.organizers }
+      .row
+        .small-12.medium-11.columns
+          .a-content-box.as-shifted.as-deeper
+            = partial "moderators", locals: { moderators: ABOUT.moderators }
