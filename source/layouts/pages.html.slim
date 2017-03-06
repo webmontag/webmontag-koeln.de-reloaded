@@ -11,7 +11,8 @@ html.no-js
     #wrap
       #page
         = yield
-      #footer
+    .row
+      .b-footer.clearfix
         = partial "/shared/footer"
       #scripts
         = javascript_include_tag "all"
