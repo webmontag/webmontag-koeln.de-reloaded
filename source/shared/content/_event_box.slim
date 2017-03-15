@@ -1,12 +1,12 @@
 .b-event-box
   h3.a-trapezoid-headline
-    =I18n.t('events.next.title', locale: locale)
+    =I18n.t('events.next.title', locale: 'de')
   .row[data-equalizer data-equalize-on="medium"]
     .small-12.medium-6.columns.h-border-right[data-equalizer-watch]
       h4.b-event-box--date
         - if next_event.present?
           a href="events/#{next_event.date}"
-            =I18n.localize parse_date(next_event.date), format: :long, locale: locale
+            =I18n.localize parse_date(next_event.date), format: :long, locale: 'de'
         - else
           | TBA
       .b-event-box--location
@@ -18,7 +18,7 @@
     .small-12.medium-6.columns[data-equalizer-watch]
       - if next_event.present?
         .b-event-box--attend
-          p=I18n.t('events.next.attend_now', locale: locale)
+          p=I18n.t('events.next.attend_now', locale: 'de')
 
           - if next_event.facebook_url
             a.a-button.as-cta href=next_event.facebook_url
