@@ -4,20 +4,17 @@ navigationable: true
 ---
 
 - ABOUT = data.about
-#header
-  = partial "/shared/header"
-
-    .b-content-boxes
-      .row
-        .small-12.medium-11.columns
-          .a-content-box
-            h3.a-content-box--title = ABOUT.title
-            p = ABOUT.description
-      .row
-        .small-12.medium-11.medium-offset-1.columns
-          .a-content-box.as-dark.as-shifted
-            = partial "organizers", locals: { organizers: ABOUT.organizers }
-      .row
-        .small-12.medium-11.columns
-          .a-content-box.as-shifted.as-deeper
-            = partial "moderators", locals: { moderators: ABOUT.moderators }
+.b-content-boxes
+  .row
+    .small-12.medium-11.columns
+      .a-content-box
+        h3.a-content-box--title = ABOUT.title
+        p = ABOUT.description
+  .row
+    .small-12.medium-11.medium-offset-1.columns
+      .a-content-box.as-dark.as-shifted
+        = partial "organizers", locals: { organizers: ABOUT.organizers }
+  .row
+    .small-12.medium-11.columns
+      .a-content-box.as-shifted.as-deeper
+        = partial "moderators", locals: { moderators: ABOUT.moderators }

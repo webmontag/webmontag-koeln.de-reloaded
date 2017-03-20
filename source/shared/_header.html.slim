@@ -1,16 +1,5 @@
-- navigation_pages = sitemap.resources.select{ |item| item.data.navigationable && item.data.title }.sort_by{ |item| item.data.title }
 header.b-header
-  .title-bar[data-responsive-toggle="main-menu" data-hide-for="medium"]
-    button.menu-icon[type="button" data-toggle]
-    .title-bar-title
-      | Menu
-  #main-menu.top-bar
-    .top-bar-right
-      ul.dropdown.b-dropdown-menu.menu[data-dropdown-menu]
-        - navigation_pages.each do |page|
-          li
-            = link_to page.url, class: (page.url == current_page.url ? 'a-menu-item is-current' : 'a-menu-item')
-              = page.data.title
+  = partial "shared/_navigation.html.slim"
   .b-header--content
     -if defined? yield
       = yield
