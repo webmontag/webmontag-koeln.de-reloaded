@@ -4,10 +4,9 @@ navigationable: true
 ---
 
 - SPEAKERS = data.speakers
-#speakers-header.clearfix
-  .large-10.large-centered.medium-12.columns
+.large-10.large-centered.medium-12.columns
     h3.a-page-title = SPEAKERS.title
 
-#main-container.clearfix
-  #speakers.large-centered.medium-12.columns
+.b-content-boxes.clearfix
+  .large-centered.medium-12.columns
     = partial "speakers", locals: { speakers: SPEAKERS.speakers }
