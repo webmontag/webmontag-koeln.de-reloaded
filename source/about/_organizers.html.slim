@@ -1,6 +1,6 @@
-h3.title
+h3
   |Organisatoren
-.person-blocks.row
+.row
   - organizers.each do |organizer|
     .a-person-container.large-4.medium-6.small-12
       = partial "/shared/person_block", locals: { person: organizer }
