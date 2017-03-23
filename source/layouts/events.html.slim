@@ -11,27 +11,18 @@ html.no-js
     #wrap
       #page
         #header
-          = partial "/shared/header"
+          = partial "/shared/header-small"
         .content
-          .event-box
-            = partial "shared/content/_event_box.slim",
-              locals: {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
-          #event-data.row.large-10.large-centered
-            .back-link
-              a href="/archive"
-                =I18n.t('events.past.list', locale: 'de')
-            .event-hero
-              = partial "shared/event-structured-markup", locals: {event: current_page.data}
-            .event-details
-              = yield
+          #event-data.row
+            .small-12.large-10.large-centered.columns
+              = link_to "&larr; zurück zur Übersicht", "/archive", class: "back-link"
+              .b-event-hero
+                = partial "shared/event-structured-markup", locals: {event: current_page.data}
+              .b-event-details
+                = yield
     .row
       .b-footer.clearfix
         = partial "/shared/footer"
 
     #scripts
-      = partial "/shared/scripts", locals: { google_maps: true }
-      = javascript_include_tag "all"
-
-    #scripts
-      = partial "/shared/scripts", locals: { google_maps: false }
       = javascript_include_tag "all"

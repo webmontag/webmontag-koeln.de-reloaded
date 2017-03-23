@@ -10,5 +10,5 @@
         ul class="archive-#{year}"
           - events.reverse.each do |event|
             li
-              a href="/events/#{event.date}"
+              a.a-link-pill href="/events/#{event.date}"
                 = I18n.localize parse_date(event.date), format: '%d. %B', locale: 'de'

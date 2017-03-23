@@ -1,27 +1,28 @@
 = unless event.empty?
   span { itemscope itemtype="http://schema.org/Event" }
-
+  meta { itemprop="startDate" content="#{event.startDate}"}
+  meta { itemprop="endDate" content="#{event.endDate}"}
+  
+  .small-12.colums
     span { itemprop="performer" }
-      a {itemprop="url" href="#{event.url}"}
-        h3 { itemprop="name" } = event.name
+      h3.a-page-title { itemprop="name" } 
+        = event.title + ', ' + event.startDate.to_date.strftime('%d.%m.%Y')
+  .row
+    .small-12.medium-2.columns
+      img { class="a-event-image" itemprop="image" src="/images/logo.svg" }
+    .small-12.medium-10.columns
+      .further-info
+        span { itemprop="location" itemscope itemtype="http://schema.org/Place" }
+          p { itemprop="name" } = event.location.name
+          p { itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" }
+            span { itemprop="streetAddress" } = event.location.address.streetAddress
+            br
+            span { itemprop="postalCode" } = event.location.address.postalCode
+            br
+            span { itemprop="addressLocality"} = event.location.address.addressLocality
+            br
+            span { itemprop="addressCountry" } = event.location.address.addressCountry.name
 
-    .description
-      p
-        span { itemprop="description" } =event.description
-        meta { itemprop="startDate" content="#{event.startDate}"}
-        meta { itemprop="endDate" content="#{event.endDate}"}
-
-    .further-info
-      h4 =event.title
-      span { itemprop="location" itemscope itemtype="http://schema.org/Place" }
-        p { itemprop="name" } = event.location.name
-        p { itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" }
-          span { itemprop="streetAddress" } = event.location.address.streetAddress
-          span { itemprop="postalCode" } = event.location.address.postalCode
-          span { itemprop="addressLocality"} = event.location.address.addressLocality
-          span { itemprop="addressCountry" } = event.location.address.addressCountry.name
-
-      span { itemprop="offers" itemscope itemtype="http://schema.org/Offer" }
-        a { itemprop="url" href="#{event.offers.url}" }
-        ' 19:00 until 21:00
-    img { class="event-image" itemprop="image" src="/assets/images/logo_event.png" }
+        span { itemprop="offers" itemscope itemtype="http://schema.org/Offer" }
+          a { itemprop="url" href="#{event.offers.url}" }
+          ' 19:00 until 21:00
