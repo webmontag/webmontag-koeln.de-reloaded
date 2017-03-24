@@ -8,20 +8,20 @@
 		p
 			= person.info
 	.a-person--footer
-		ul.contact-icons
+		ul.b-contact-icons-list
 			- if person.instagram
-				li
-					a.social-icon[href="#", title="#{person.name}s instagram"]
+				li.b-contact-icons-list--entry
+					a.a-social-icon[href="#", title="#{person.name}s instagram"]
 						span = svg('icon-calendar.svg')
 			- if person.twitter
-				li
-					a.social-icon[href="#", title="#{person.name}s twitter"]
+				li.b-contact-icons-list--entry
+					a.a-social-icon[href="#", title="#{person.name}s twitter"]
 						span = svg('icon-calendar.svg')
 			- if person.facebook
-				li
-					a.social-icon[href="#", title="#{person.name}s facebook"]
+				li.b-contact-icons-list--entry
+					a.a-social-icon[href="#", title="#{person.name}s facebook"]
 						span = svg('icon-calendar.svg')
 			- if person.github
-				li
-					a.social-icon[href="#", title="#{person.name}s github"]
+				li.b-contact-icons-list--entry
+					a.a-social-icon[href="#", title="#{person.name}s github"]
 						span = svg('icon-calendar.svg')
