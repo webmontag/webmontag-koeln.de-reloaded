@@ -1,14 +1,13 @@
 - past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(today_date)}.compact
 - events_grouped_by_year = past_events.group_by{ |event| event.date[0,4] }
 - events_grouped_by_year.each do |year, events|
-  .archive-block.medium-6.small-12
-    .content-wrapper-inverted
-      .archive-header.clearfix
-        h3.year
-          = year
-      .archive-body
-        ul class="archive-#{year}"
+  .large-6.medium-12.columns
+    .b-archive-block
+      h3.b-archive-block--header.clearfix
+        = year
+      .b-archive-block--body
+        ul class="archive-#{year} b-link-list"
           - events.reverse.each do |event|
-            li
+            li.b-link-list--item
               a.a-link-pill href="/events/#{event.date}"
                 = I18n.localize parse_date(event.date), format: '%d. %B', locale: 'de'
