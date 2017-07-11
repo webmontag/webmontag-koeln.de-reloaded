@@ -35,16 +35,16 @@ page "/events/", layout: "events-all"
 
 # Fix permissons
 # ----------------------------------------------
-class FixPermissions < Middleman::Extension
-  def initialize(app, options_hash={}, &block)
-    super
-    app.after_build do |builder|
-      builder.run 'chmod -R a+r build'
-    end
-  end
-end
+# class FixPermissions < Middleman::Extension
+#   def initialize(app, options_hash={}, &block)
+#     super
+#     app.after_build do |builder|
+#       builder.run 'chmod -R a+r build'
+#     end
+#   end
+# end
 
-::Middleman::Extensions.register(:fix_permissions, FixPermissions)
+# ::Middleman::Extensions.register(:fix_permissions, FixPermissions)
 
 require 'sprockets/es6'
 activate :sprockets do |s|
@@ -159,6 +159,6 @@ configure :build do
   activate :cache_buster
 
   # Fix permissions
-  activate :fix_permissions
+  # activate :fix_permissions
 
 end
