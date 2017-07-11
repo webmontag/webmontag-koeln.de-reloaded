@@ -46,11 +46,14 @@ end
 
 ::Middleman::Extensions.register(:fix_permissions, FixPermissions)
 
+require 'sprockets/es6'
+activate :sprockets do |s|
+  s.supported_output_extensions << '.es6'
+end
 
 # Extensions
 # ----------------------------------------------
 
-activate :es6
 activate :i18n
 # Activate directory indexes
 activate :directory_indexes
@@ -81,19 +84,19 @@ helpers do
     Date.parse(string)
   end
   def host_with_port
-    [host, optional_port].compact.join(':')
+    [config[:host], optional_port].compact.join(':')
   end
 
   def optional_port
-    port unless port.to_i == 80
+    config[:port] unless config[:port].to_i == 80
   end
 
   def page_url
-    protocol + host_with_port + current_page.url
+    config[:protocol] + host_with_port + current_page.url
   end
 
   def image_url(source)
-    protocol + host_with_port + image_path(source)
+    config[:protocol] + host_with_port + image_path(source)
   end
 
   def page_title

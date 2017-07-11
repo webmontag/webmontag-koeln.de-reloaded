@@ -1,5 +1,5 @@
-- past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(today_date)}.compact
-- upcoming_events = data.webmondays.map { |later| later if parse_date(later.date) >= parse_date(today_date)}.compact
+- past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(config[:today_date])}.compact
+- upcoming_events = data.webmondays.map { |later| later if parse_date(later.date) >= parse_date(config[:today_date])}.compact
 - next_event = upcoming_events.pop
 #content-en.content lang="en" style=("display: none;")
   .event-box

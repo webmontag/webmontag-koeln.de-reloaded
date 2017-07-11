@@ -9,7 +9,7 @@ source 'https://rubygems.org'
 # gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem "middleman", "3.4.0"
+gem "middleman", "4.2.1"
 
 # Middleman minify HTML
 gem "middleman-minify-html"
@@ -17,11 +17,11 @@ gem "middleman-minify-html"
 # Middleman autoprefixer
 gem "middleman-autoprefixer"
 
-gem "middleman-deploy"
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
 # Middleman ES6 support
-gem "middleman-es6", github: "vast/middleman-es6"
-
+gem 'middleman-sprockets', '~> 4.0.0.rc'
+gem 'sprockets-es6'
 # Slim
 gem "slim"
 
