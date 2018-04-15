@@ -144,6 +144,15 @@ body {
   color: #b2fc52;
 }
 
+
+.event-info {
+  text-align: center;
+  margin: 10px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #5c5c5c;
+  width: 100%;
+}
+
 .event-date {
   font-size: 1.3em;
   line-height: 0.75em;
@@ -155,7 +164,8 @@ body {
   border-bottom: 1px solid #5c5c5c;
   width: 100%;
 }
-.event-date a {
+
+.event-date a, .event-info a {
   color: #FFF;
 }
 

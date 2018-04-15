@@ -4,7 +4,13 @@
   .event-date
     a href="events/#{next_event.date}"
       =I18n.localize parse_date(next_event.date), format: :long, locale: locale
-
+  .event-info
+    ul
+      li Oliver Voßhenrich: Amazon GO aus Deutschland
+      li Tim Becker: Anonymisieren und Pseudonymisieren im Rahmen des GDPR
+      li Jan Kus: Stressbewältigung mit Achtsamkeitspraxis (Eine Erfahrung, kein Kurs!)
+      li Robert C. Mendez: Digitale Sprachassistenten
+      li David Akinjise: The New Now - Die “Consultapreneure” aus Köln.
     h2
   .event-location
     =data.config.page.place.name
