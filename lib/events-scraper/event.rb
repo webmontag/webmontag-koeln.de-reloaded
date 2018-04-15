@@ -15,17 +15,18 @@ class Event
 =end
 
   def initialize (date_string, link, index)
-
     @date_string = date_string
     @link = link
     @index = index
     @facebook_event_url = facebook_url
+    @meetup_event_url = meetup_url
   end
 
   def to_hash
     {
       name: name,
-      facebook_url: @facebook_url,
+      facebook_url: @facebook_event_url,
+      meetup_url: @meetup_event_url,
       wiki_url: wiki_url,
       date: @date_string,
     }
@@ -36,10 +37,20 @@ class Event
   end
 
 
+  def meetup_url
+    meetup_event = remote_document.xpath("//a[contains(@href,'meetup.com/de-DE/Webmontag-Koln/events')]")
+    unless meetup_event.empty?
+      print " +Meetup event".red
+      meetup_event.attribute("href").to_s
+    else
+      MEETUP_URL
+    end
+  end
+
   def facebook_url
     facebook_event = remote_document.xpath("//a[contains(@href,'facebook.com/events')]")
     unless facebook_event.empty?
-      print " +Facebook event".green
+      print " +Facebook event".blue
       facebook_event.attribute("href").to_s
     else
       FACEBOOK_URL

@@ -5,6 +5,7 @@ require 'yaml'
 
 WEBSITE = 'http://webmontag.de'
 FACEBOOK_URL = ''
+MEETUP_URL = ''
 ROOT_DIR = File.expand_path("../../../", __FILE__)
 
 def print_divider
