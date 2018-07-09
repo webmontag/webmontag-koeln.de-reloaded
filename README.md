@@ -9,3 +9,8 @@
   Events scraper brings Webmontag events that are existed in: http://webmontag.de/location/koeln/index to /source/events/ as html.erb files and extract the details to webmondays.yml file.
 
   To run events-scraper, `ruby lib/events-scraper.rb` should be called.
+
+## Development
+- clone the repository
+- run `$ bundle install`
+- run `$ bower install ` (you may need to upgrade bower to latest)
