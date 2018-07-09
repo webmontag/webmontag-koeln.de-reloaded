@@ -1,0 +1,123 @@
+---
+  :title: "Redner und Firmen"
+  :speakers:
+  - :name: Jan Kus
+    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :info: >
+      Jan hat sich der Web Montag schnell weiterverbreitet:
+      Treffen finden mittlerweile in mehr als 40 Städten überall in
+      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+    :social:
+      - :name: "instagram"
+        :icon: "icon-instagram.svg"
+        :link: https://www.instagram.com/?hl=en
+      - :name: "twitter"
+        :icon: "icon-twitter.svg"
+        :link: https://twitter.com/
+      - :name: "github"
+        :icon: "icon-github.svg"
+        :link: https://github.com
+      - :name: "facebook"
+        :icon: "icon-facebook.svg"
+        :link: https://www.facebook.com/
+
+  - :name: Tim Schneider
+    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :info: >
+      Tim hat sich der Web Montag schnell weiterverbreitet:
+      Treffen finden mittlerweile in mehr als 40 Städten überall in
+      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+    :social:
+      - :name: "instagram"
+        :icon: "icon-instagram.svg"
+        :link: https://www.instagram.com/?hl=en
+      - :name: "twitter"
+        :icon: "icon-twitter.svg"
+        :link: https://twitter.com/
+      - :name: "github"
+        :icon: "icon-github.svg"
+        :link: https://github.com
+      - :name: "facebook"
+        :icon: "icon-facebook.svg"
+        :link: https://www.facebook.com/
+
+  - :company: Railslove
+    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :info: >
+      Jakob hat sich der Web Montag schnell weiterverbreitet:
+      Treffen finden mittlerweile in mehr als 40 Städten überall in
+      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+
+  - :name: Jakob Hilden
+    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :info: >
+      Jakob hat sich der Web Montag schnell weiterverbreitet:
+      Treffen finden mittlerweile in mehr als 40 Städten überall in
+      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+    :social:
+      - :name: "instagram"
+        :icon: "icon-instagram.svg"
+        :link: https://www.instagram.com/?hl=en
+      - :name: "twitter"
+        :icon: "icon-twitter.svg"
+        :link: https://twitter.com/
+      - :name: "github"
+        :icon: "icon-github.svg"
+        :link: https://github.com
+      - :name: "facebook"
+        :icon: "icon-facebook.svg"
+        :link: https://www.facebook.com/
+
+  - :company: Codevise
+    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :info: >
+      Jakob hat sich der Web Montag schnell weiterverbreitet:
+      Treffen finden mittlerweile in mehr als 40 Städten überall in
+      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+
+  - :name: Tatjana
+    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :info: >
+      Tatjana hat sich der Web Montag schnell weiterverbreitet:
+      Treffen finden mittlerweile in mehr als 40 Städten überall in
+      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+    :social:
+      - :name: "instagram"
+        :icon: "icon-instagram.svg"
+        :link: https://www.instagram.com/?hl=en
+      - :name: "twitter"
+        :icon: "icon-twitter.svg"
+        :link: https://twitter.com/
+      - :name: "github"
+        :icon: "icon-github.svg"
+        :link: https://github.com
+      - :name: "facebook"
+        :icon: "icon-facebook.svg"
+        :link: https://www.facebook.com/
+
+  - :name: Amed Kino
+    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :info: >
+      Jan hat sich der Web Montag schnell weiterverbreitet:
+      Treffen finden mittlerweile in mehr als 40 Städten überall in
+      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+    :social:
+      - :name: "instagram"
+        :icon: "icon-instagram.svg"
+        :link: https://www.instagram.com/?hl=en
+      - :name: "twitter"
+        :icon: "icon-twitter.svg"
+        :link: https://twitter.com/
+      - :name: "github"
+        :icon: "icon-github.svg"
+        :link: https://github.com
+      - :name: "facebook"
+        :icon: "icon-facebook.svg"
+        :link: https://www.facebook.com/
+
+  - :company: Saleskinge
+    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :info: >
+      Jakob hat sich der Web Montag schnell weiterverbreitet:
+      Treffen finden mittlerweile in mehr als 40 Städten überall in
+      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.

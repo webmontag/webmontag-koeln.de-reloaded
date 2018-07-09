@@ -9,7 +9,7 @@ source 'https://rubygems.org'
 # gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem "middleman", "4.2.1"
+gem "middleman", "3.4.0"
 
 # Middleman minify HTML
 gem "middleman-minify-html"
@@ -17,11 +17,11 @@ gem "middleman-minify-html"
 # Middleman autoprefixer
 gem "middleman-autoprefixer"
 
-gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+gem "middleman-deploy"
 
 # Middleman ES6 support
-gem 'middleman-sprockets', '~> 4.0.0.rc'
-gem 'sprockets-es6'
+gem "middleman-es6", github: "vast/middleman-es6"
+gem "middleman-livereload", "~> 3.4.3"
 # Slim
 gem "slim"
 
@@ -31,6 +31,7 @@ gem "neat"
 
 # HTML, XML, SAX, and Reader parser
 gem 'nokogiri'
+
 gem 'byebug'
 
 group :development do
@@ -38,5 +39,4 @@ group :development do
   gem 'rspec'
   gem 'capybara'
   gem 'poltergeist'
-
 end

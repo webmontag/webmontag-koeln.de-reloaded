@@ -1,0 +1,24 @@
+doctype html
+html.no-js
+  head
+    = partial "/shared/head"
+
+  body class=page_classes
+
+    #wrap
+      #header
+        = partial "/shared/header"
+
+      #content
+        = yield
+
+    #map.b-map
+      = partial "/shared/map"
+
+    .row
+      .b-footer.clearfix
+        = partial "/shared/footer"
+
+    #scripts
+      = partial "/shared/scripts", locals: { google_maps: true }
+      = javascript_include_tag "all"

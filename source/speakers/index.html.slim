@@ -1,0 +1,13 @@
+---
+title: "Redner & Firmen"
+navigationable: true
+---
+
+- SPEAKERS = data.speakers
+.row
+  .large-10.large-centered.medium-12.columns
+      h3.a-page-title = SPEAKERS.title
+
+  .b-content-boxes.clearfix
+    .small-12.columns
+        = partial "speakers", locals: { speakers: SPEAKERS.speakers }

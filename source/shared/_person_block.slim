@@ -1,0 +1,16 @@
+.a-person
+  .a-person--header
+    .a-person--image
+      img src="#{person.image}"
+    h4.a-person--name
+        = person.name
+  .a-person--body
+    p
+      = person.info
+  .a-person--footer
+    - if person.social
+      ul.b-contact-icons-list
+        - person.social.each do |network|
+          li.b-contact-icons-list--entry
+            a.a-social-icon[href="#{network.link}" title="#{network.name}"]
+              = svg("#{network.icon}")

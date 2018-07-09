@@ -1,0 +1,28 @@
+// Colors
+$green: #3FDA90;
+$dark-green: #2ea26b;
+$cyan: #33D4A6;
+
+$white: #FFFFFF;
+$dark-blue: #3A464B;
+$light-grey: #f4f4f4;
+$smoke-grey: #F4F4F4;
+$dark-grey: #808080;
+$orange: #E74625;
+$yellow: #D6942B;
+
+$mirage: #3E474D;
+$mirageText: #E6E7E7;
+
+// Gradients
+$gradient-next-event: linear-gradient(to bottom, $orange, $yellow);
+$gradient-button: linear-gradient(to bottom, $green, $cyan);
+$gradient-button-dark: linear-gradient(to bottom, darken($green, 20), darken($cyan, 20));
+$gradient-button-cta: linear-gradient(to bottom, $yellow, $orange);
+$gradient-button-cta-dark: linear-gradient(to bottom, darken($yellow, 10), darken($orange, 10));
+// Typography
+
+// Overrides Foundation's default font family
+$body-font-family: 'Source Sans Pro', sans-serif;
+$semibold: 600;
+$body-background-color: $smoke-grey;

@@ -1,21 +1,20 @@
-- past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(config[:today_date])}.compact
-- upcoming_events = data.webmondays.map { |later| later if parse_date(later.date) >= parse_date(config[:today_date])}.compact
+---
+title: "Home"
+navigationable: true
+---
+- past_events = data.webmondays.map { |past| past if parse_date(past.date) < parse_date(today_date)}.compact
+- upcoming_events = data.webmondays.map { |later| later if parse_date(later.date) >= parse_date(today_date)}.compact
 - next_event = upcoming_events.pop
-#content-en.content lang="en" style=("display: none;")
-  .event-box
-    = partial "shared/content/_event_box.slim",
-      locals: {locale: 'en', next_event: next_event, upcoming_events: upcoming_events}
-  .intro
-    = partial "shared/index/_intro.slim", locals: {locale: 'en'}
-  .past
-    = partial "shared/content/_archive.slim", locals: {past_events: past_events, locale: 'en', date_format: :day_month}
+.b-next-event
+  .row
+    .b-next-event--box.medium-12.large-9.columns
+      = partial "shared/content/_event_box.slim",
+      locals: {next_event: next_event, upcoming_events: upcoming_events}
+.b-content-boxes
+  .row
+    .small-12.medium-11.medium-offset-1.columns
+      = partial "shared/index/_intro.slim", locals: {next_event: next_event}
 
-#content-de.content lang="de"
-  .event-box
-    = partial "shared/content/_event_box.slim",
-      locals: {locale: 'de', next_event: next_event, upcoming_events: upcoming_events}
-  .intro
-    = partial "shared/index/_intro.slim", locals: {locale: 'de'}
-  .past
-    = partial "shared/content/_archive.slim", locals: {past_events: past_events, locale: 'de', date_format: :day_month}
- 
+  .row
+    .text-center.small-12.medium-11.columns
+      = partial "shared/index/_submit-talk.slim"

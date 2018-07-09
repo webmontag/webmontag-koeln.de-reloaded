@@ -1,20 +1,26 @@
 # View Middleman configurations:
 # http://localhost:4567/__middleman/config/
 
-
+activate :livereload
 # Vars
 # ----------------------------------------------
 set :today_date, Time.now.strftime("%Y-%m-%d")
+
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+set :fonts_dir,   'fonts'
+
+
+ignore "bower_components/*"
+ignore "javascripts/app.js"
+ignore "javascripts/script.js"
 
 
 set :protocol, "https://"
 set :host, "webmontag-koeln.de.com"
 set :port, 80
 
-set :css_dir,     'assets/stylesheets'
-set :js_dir,      'assets/javascripts'
-set :images_dir,  'assets/images'
-set :fonts_dir,   'assets/fonts'
 
 set :trailing_slash, false
 
@@ -23,8 +29,8 @@ set :trailing_slash, false
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page '/', layout: "home"
 page "/events/*", layout: "events"
-page "/events/", layout: "events-all"
 
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
@@ -33,27 +39,37 @@ page "/events/", layout: "events-all"
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 
+compass_config do |config|
+  config.add_import_path "bower_components/foundation-sites/scss/"
+  config.output_style = :compact
+
+  # Set this to the root of your project when deployed:
+  config.http_path = "/"
+  config.css_dir = "stylesheets"
+  config.sass_dir = "stylesheets"
+  config.images_dir = "images"
+  config.javascripts_dir = "javascripts"
+end
+
+
 # Fix permissons
 # ----------------------------------------------
-# class FixPermissions < Middleman::Extension
-#   def initialize(app, options_hash={}, &block)
-#     super
-#     app.after_build do |builder|
-#       builder.run 'chmod -R a+r build'
-#     end
-#   end
-# end
-
-# ::Middleman::Extensions.register(:fix_permissions, FixPermissions)
-
-require 'sprockets/es6'
-activate :sprockets do |s|
-  s.supported_output_extensions << '.es6'
+class FixPermissions < Middleman::Extension
+  def initialize(app, options_hash={}, &block)
+    super
+    app.after_build do |builder|
+      builder.run 'chmod -R a+r build'
+    end
+  end
 end
+
+::Middleman::Extensions.register(:fix_permissions, FixPermissions)
+
 
 # Extensions
 # ----------------------------------------------
 
+activate :es6
 activate :i18n
 # Activate directory indexes
 activate :directory_indexes
@@ -72,8 +88,9 @@ end
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   @bower_assets_path = File.join "#{root}", @bower_config["directory"]
-  sprockets.append_path @bower_assets_path
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
 end
+
 
 
 # Helpers
@@ -84,19 +101,21 @@ helpers do
     Date.parse(string)
   end
   def host_with_port
-    [config[:host], optional_port].compact.join(':')
+    [host, optional_port].compact.join(':')
   end
-
+  def svg(image)
+    sprockets.find_asset(image).to_s
+  end
   def optional_port
-    config[:port] unless config[:port].to_i == 80
+    port unless port.to_i == 80
   end
 
   def page_url
-    config[:protocol] + host_with_port + current_page.url
+    protocol + host_with_port + current_page.url
   end
 
   def image_url(source)
-    config[:protocol] + host_with_port + image_path(source)
+    protocol + host_with_port + image_path(source)
   end
 
   def page_title
@@ -159,6 +178,6 @@ configure :build do
   activate :cache_buster
 
   # Fix permissions
-  # activate :fix_permissions
+  activate :fix_permissions
 
 end

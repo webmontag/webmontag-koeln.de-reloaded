@@ -1,11 +1,19 @@
-header
-  a href="/"
-    h1.hide-text Webmontag Köln
-aside
-  ul#social-bar-header.social-bar
-    li
-      a.facebook.hide-text href="https://www.facebook.com/WebmontagKoeln" Facebook
-    li
-      a.twitter.hide-text href="https://twitter.com/wmcgn" @wmcgn
-    li
-      a.nerdhub.hide-text href="http://hacken.in/events/42-webmontag-koln/" Hackn.in
+header.b-header
+  = partial "shared/_navigation.html.slim"
+  .b-header--content
+    -if defined? yield
+      = yield
+    -else
+      .row.column.text-center
+        .logo
+          a[href="#"]
+            img src="/images/logo.svg"
+        h1.a-page-title
+          | Webmontag Köln
+        .social-icons
+          a.a-social-icon.with-border[href="#"]
+            img src="/images/icon-facebook.svg"
+          a.a-social-icon.with-border[href="#"]
+            img src="/images/icon-twitter.svg"
+          a.a-social-icon.with-border[href="#"]
+            img src="/images/icon-calendar.svg"

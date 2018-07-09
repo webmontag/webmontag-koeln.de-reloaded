@@ -1,53 +1,25 @@
-.event-box-inner
-  h3
-    =I18n.t('events.next.title', locale: locale)
-  .event-date
-    a href="events/#{next_event.date}"
-      =I18n.localize parse_date(next_event.date), format: :long, locale: locale
-  .event-info
-    ul
-      li Oliver Voßhenrich: Amazon GO aus Deutschland
-      li Tim Becker: Anonymisieren und Pseudonymisieren im Rahmen des GDPR
-      li Jan Kus: Stressbewältigung mit Achtsamkeitspraxis (Eine Erfahrung, kein Kurs!)
-      li Robert C. Mendez: Digitale Sprachassistenten
-      li David Akinjise: The New Now - Die “Consultapreneure” aus Köln.
-    h2
-  .event-location
-    =data.config.page.place.name
-  .event-address
-    ="#{data.config.page.place.street}, #{data.config.page.place.number} #{data.config.page.place.city}"
-  .event-attend
-    p
-      =I18n.t('events.next.attend_now', locale: locale)
-  .event-attend-buttons
-    a.button href=next_event.facebook_url
-      i.icon-facebook
-      = "Facebook"
-    a.button href=next_event.meetup_url
-      i.icon-meetup
-      = "Meetup"
-    a.button href=next_event.wiki_url
-      i.icon-wikipedia
-      = "Wiki"
-  .event-request
-    p
-      =I18n.t('events.next.interact_request', locale: locale)
-      <br/>
-      = I18n.t('events.next.interact_wiki', locale: locale)
-      a href=next_event.wiki_url wiki
-      = I18n.t('events.next.interact_or', locale: locale)
-      a href=next_event.facebook_url
-        =I18n.t('events.next.interact_facebook', locale: locale)
-.triangle
-.event-box-upcoming
-  h3
-    =I18n.t('events.upcoming.title', locale: locale)
-  - if upcoming_events.empty?
-    p
-      =I18n.t('events.upcoming.no-events', locale: locale)
-  - else
-    ul
-      -upcoming_events.reverse.each_with_index do |upcoming_event|
-        li
-          a href="events/#{upcoming_event.date}"
-            =I18n.localize parse_date(upcoming_event.date), format: :day_month, locale: locale
+.b-event-box
+  h3.a-trapezoid-headline
+    =I18n.t('events.next.title', locale: 'de')
+  .row[data-equalizer data-equalize-on="medium"]
+    .small-12.medium-6.columns.h-border-right[data-equalizer-watch]
+      h4.b-event-box--date
+        - if next_event.present?
+          a href="events/#{next_event.date}"
+            =I18n.localize parse_date(next_event.date), format: :long, locale: 'de'
+        - else
+          | TBA
+      .b-event-box--location
+        =data.config.page.place.name
+        br
+        ="#{data.config.page.place.street}"
+        br
+        ="#{data.config.page.place.number} #{data.config.page.place.city}"
+    .small-12.medium-6.columns[data-equalizer-watch]
+      - if next_event.present?
+        .b-event-box--attend
+          p=I18n.t('events.next.attend_now', locale: 'de')
+
+          - if next_event.facebook_url
+            a.a-button.as-cta href=next_event.facebook_url
+              | Über facebbook anmelden

@@ -6,22 +6,15 @@ html.no-js
   body class=page_classes
 
     #wrap
-      #page
-        #header
-          = partial "/shared/header"
+      #header
+        = partial "/shared/header-small"
 
-        #content
-          = yield
+      #content
+        = yield
+        
+    .row
+      .b-footer.clearfix
+        = partial "/shared/footer"
 
-        #map
-          = partial "/shared/map"
-        #hashtag
-          = "#wmcgn"
-        #twitter-box
-          = partial "/shared/twitterbox"
-        #contact
-          = partial "/shared/contact"
-        #footer
-          = partial "/shared/footer"
     #scripts
-      = partial "/shared/scripts", locals: { google_maps: true }
+      = javascript_include_tag "all"
