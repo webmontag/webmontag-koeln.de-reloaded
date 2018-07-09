@@ -2,7 +2,8 @@
 
 ## Dependencies
 
-  Ruby 2.3.1
+  Ruby 2.2
+  Middleman 3.4
 
 ## Webmontag events-scraper
 
