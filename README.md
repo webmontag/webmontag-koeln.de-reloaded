@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-  Ruby 2.2
+  Ruby 2.2.6
   Middleman 3.4
 
 ## Webmontag events-scraper
