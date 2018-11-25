@@ -19,7 +19,9 @@
       - if next_event.present?
         .b-event-box--attend
           p=I18n.t('events.next.attend_now', locale: 'de')
-
           - if next_event.facebook_url
             a.a-button.as-cta href=next_event.facebook_url
               | Über facebbook anmelden
+          - if next_event.meetup_url
+            a.a-button.as-cta href=next_event.meetup_url
+              | Über meetup.com anmelden
