@@ -2,122 +2,69 @@
   :title: "Redner und Firmen"
   :speakers:
   - :name: Jan Kus
-    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :image: "https://secure.meetupstatic.com/photos/member/7/b/8/2/highres_282691618.jpeg"
     :info: >
-      Jan hat sich der Web Montag schnell weiterverbreitet:
-      Treffen finden mittlerweile in mehr als 40 Städten überall in
-      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+      Co-Founder of Railslove, hack.institute. Craziest man alive! I love building web applications! I'm in love in FinTech stuff and I am kickstarting Startups. Nuff said. Jan Kus is a developer . He's CEO and developer at Railslove.
     :social:
       - :name: "instagram"
         :icon: "icon-instagram.svg"
-        :link: https://www.instagram.com/?hl=en
+        :link: https://www.instagram.com/jbvkoos
       - :name: "twitter"
         :icon: "icon-twitter.svg"
-        :link: https://twitter.com/
+        :link: https://twitter.com/koos
       - :name: "github"
         :icon: "icon-github.svg"
-        :link: https://github.com
+        :link: https://github.com/koos
       - :name: "facebook"
         :icon: "icon-facebook.svg"
-        :link: https://www.facebook.com/
-
+        :link: https://www.facebook.com/jbvkoos
+  - :name: Rene Bredlau
+    :image: "https://www.xing.com/img/users/d/3/4/cd25859f8.3592862,3.1024x1024.jpg"
+    :info: >
+      Moderation for Life
+    :social:
+      - :name: "twitter"
+        :icon: "icon-twitter.svg"
+        :link: https://twitter.com/murraybo
+      - :name: "github"
+        :icon: "icon-github.svg"
+        :link: https://github.com/murraybo
   - :name: Tim Schneider
-    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :image: "https://railslove-www.s3.amazonaws.com/uploads/image/62/picture/retina_tim_03.jpg"
     :info: >
-      Tim hat sich der Web Montag schnell weiterverbreitet:
-      Treffen finden mittlerweile in mehr als 40 Städten überall in
-      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+      Hi, ich bin Tim. Ich habe in der Entwicklung beinahe aller Railslove-Produkte meine Finger im Spiel. 
     :social:
-      - :name: "instagram"
-        :icon: "icon-instagram.svg"
-        :link: https://www.instagram.com/?hl=en
       - :name: "twitter"
         :icon: "icon-twitter.svg"
-        :link: https://twitter.com/
+        :link: https://twitter.com/tmschndr
       - :name: "github"
         :icon: "icon-github.svg"
-        :link: https://github.com
+        :link: https://github.com/tmschndr
       - :name: "facebook"
         :icon: "icon-facebook.svg"
-        :link: https://www.facebook.com/
-
-  - :company: Railslove
-    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
-    :info: >
-      Jakob hat sich der Web Montag schnell weiterverbreitet:
-      Treffen finden mittlerweile in mehr als 40 Städten überall in
-      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
-
-  - :name: Jakob Hilden
-    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
-    :info: >
-      Jakob hat sich der Web Montag schnell weiterverbreitet:
-      Treffen finden mittlerweile in mehr als 40 Städten überall in
-      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
-    :social:
-      - :name: "instagram"
-        :icon: "icon-instagram.svg"
-        :link: https://www.instagram.com/?hl=en
-      - :name: "twitter"
-        :icon: "icon-twitter.svg"
-        :link: https://twitter.com/
-      - :name: "github"
-        :icon: "icon-github.svg"
-        :link: https://github.com
-      - :name: "facebook"
-        :icon: "icon-facebook.svg"
-        :link: https://www.facebook.com/
-
-  - :company: Codevise
-    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
-    :info: >
-      Jakob hat sich der Web Montag schnell weiterverbreitet:
-      Treffen finden mittlerweile in mehr als 40 Städten überall in
-      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
-
-  - :name: Tatjana
-    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
-    :info: >
-      Tatjana hat sich der Web Montag schnell weiterverbreitet:
-      Treffen finden mittlerweile in mehr als 40 Städten überall in
-      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
-    :social:
-      - :name: "instagram"
-        :icon: "icon-instagram.svg"
-        :link: https://www.instagram.com/?hl=en
-      - :name: "twitter"
-        :icon: "icon-twitter.svg"
-        :link: https://twitter.com/
-      - :name: "github"
-        :icon: "icon-github.svg"
-        :link: https://github.com
-      - :name: "facebook"
-        :icon: "icon-facebook.svg"
-        :link: https://www.facebook.com/
-
+        :link: https://www.facebook.com/tmschndr
   - :name: Amed Kino
-    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+    :image: "https://railslove-www.s3.amazonaws.com/uploads/image/185/picture/retina_amed_04.jpg"
     :info: >
-      Jan hat sich der Web Montag schnell weiterverbreitet:
-      Treffen finden mittlerweile in mehr als 40 Städten überall in
-      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+      Hi, ich bin Amed. Web is the only shared experience in the world
     :social:
-      - :name: "instagram"
-        :icon: "icon-instagram.svg"
-        :link: https://www.instagram.com/?hl=en
-      - :name: "twitter"
-        :icon: "icon-twitter.svg"
-        :link: https://twitter.com/
-      - :name: "github"
-        :icon: "icon-github.svg"
-        :link: https://github.com
       - :name: "facebook"
         :icon: "icon-facebook.svg"
-        :link: https://www.facebook.com/
-
-  - :company: Saleskinge
-    :image: "https://cdn.movemeback.com/profile/Ww2D4k6H38cj5yk7Tzt6q9_medium_square.png?cbust=ChangeMeIfWantToResetImageCaching"
+        :link: https://www.facebook.com/amed.kino9
+  - :name: David Akinjise
+    :image: "https://media.licdn.com/dms/image/C4D03AQGq4KR5Cu8iOA/profile-displayphoto-shrink_800_800/0?e=1548892800&v=beta&t=ByWXMB4WoEFoN1jAfXwqErWP3m5UKl8KCIrDZoyYvGI"
     :info: >
-      Jakob hat sich der Web Montag schnell weiterverbreitet:
-      Treffen finden mittlerweile in mehr als 40 Städten überall in
-      Deutschland und Österreich, in Schweden, Silicon Valley sowie auf Second Life statt.
+      David ist seit 15 Jahren Geek von Berufs wegen und hat als Produkt Marketing Manager zahlreiche Smartphones und Internet Services in den deutschen Markt eingeführt.
+    :social:
+      - :name: "twitter"
+        :icon: "icon-twitter.svg"
+        :link: https://twitter.com/integreation
+      - :name: "facebook"
+        :icon: "icon-facebook.svg"
+        :link: https://www.facebook.com/akinjise
+  - :company: Railslove
+    :image: "https://www.xing.com/img/custom/cp/assets/logo/5/3/0/62768/square_256px/railslove-green20140305-20521-1cbk2jt.jpg"
+    :info: EIN TEAM FÜR ALLE WEB-ANWENDUNGEN UND DIGITALE PRODUKTE. Produkte fürs Web sind mehr als unser tägliches Geschäft. Als Software-Architekten, Designer und Strategen begleiten wir unsere Kunden von der ersten Idee bis zum Launch – und darüber hinaus. Im anspruchsvollen digitalen Umfeld schaffen wir mit einem erfahrenen Team Produkte, die User begeistern und dem Kunden einen echten Mehrwert bieten. Mit weit mehr als Ruby on Rails.
+  - :company: Everykey - Open hardware
+    :image: "http://www.presseverykey.com/img/onesquare_sm.png"
+    :info: The Everykey Board is a tiny prototyping and development board. It can be used to build USB peripherals, standalone applications or to simply have fun with a powerful embeded controller.
