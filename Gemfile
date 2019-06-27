@@ -1,7 +1,7 @@
 # If you do not have OpenSSL installed, change
 # the following line to use 'http://'
 source 'https://rubygems.org'
-
+ruby "2.3.8"
 # For faster file watcher updates on Windows:
 # gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 
@@ -9,7 +9,7 @@ source 'https://rubygems.org'
 # gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem "middleman", "3.4.0"
+gem "middleman"
 
 # Middleman minify HTML
 gem "middleman-minify-html"
@@ -21,7 +21,7 @@ gem "middleman-deploy"
 
 # Middleman ES6 support
 gem "middleman-es6", github: "vast/middleman-es6"
-gem "middleman-livereload", "~> 3.4.3"
+gem "middleman-livereload"
 # Slim
 gem "slim"
 
